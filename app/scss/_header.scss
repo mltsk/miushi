@@ -67,6 +67,11 @@
     &__logo {
         width: 45px;
         height: 45px;
+
+    }
+
+    &__logo-image {
+        margin-left: 50%;
     }
 
     &__box {
@@ -250,6 +255,10 @@
         &__logo {
             width: 151px;
             height: 55px;
+        }
+
+        &__logo-image {
+            margin-left: 0;
         }
 
         &__box {

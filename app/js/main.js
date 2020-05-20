@@ -261,7 +261,27 @@ foodSectionWok.addEventListener('click', (event)=> {
     calcPriceWok(foodSectionWok);
 });
     
+
+//Кнопа показать все
+
+const reasonsBtn = document.querySelector('.reasons__btn');
+let reasonsList = document.querySelector('.reasons__list');
+
+console.log('213', reasonsList.style);
+
+reasonsBtn.addEventListener('click', ()=> {
     
+    if ((reasonsList.style.maxHeight == '') || (reasonsList.style.maxHeight == '750px')) {
+        reasonsList.style.maxHeight = reasonsList.scrollHeight + 'px';
+        reasonsBtn.textContent = "Спрятать";
+    } else {
+        reasonsList.style.maxHeight = '750px';
+        reasonsBtn.textContent = "Показать все";
+    }
+
+    // reasonsList.classList.toggle('opened');
+    // console.log(reasonsList.scrollHeight);
+})
 
 
 

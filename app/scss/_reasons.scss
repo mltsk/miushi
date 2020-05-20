@@ -1,5 +1,8 @@
 .reasons {
 
+    max-width: 1140px;
+    margin: 0 auto;
+
     &__title {
 
         padding: 0 30px;
@@ -14,6 +17,10 @@
         flex-direction: column;
         align-items: center;
         margin-top: 50px;
+        max-height: 750px;
+
+        overflow: hidden;
+        transition: 0.5s;
     }
 
     &__item {
@@ -21,7 +28,7 @@
         flex-direction: column;
         align-items: center;
         min-height: 160px;
-        max-width: 195px;
+        width: 195px;
         margin: 40px 0;
 
         text-align: center;
@@ -33,14 +40,15 @@
 
             display: block;
             margin-bottom: 30px;
+            width: 92px;
+            height: 73px;
 
             background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         &--kitchen::before {
-            width: 68px;
-            height: 64px;
-
             background-image: url('../img/kitchen.png');
 
             @media (min-resolution: 144dpi),
@@ -56,9 +64,6 @@
         }
 
         &--rice::before {
-            width: 64px;
-            height: 73px;
-
             background-image: url('../img/rice.png');
 
             @media (min-resolution: 144dpi),
@@ -72,10 +77,8 @@
             }
 
         }
-        &--pizza::before {
-            width: 62px;
-            height: 72px;
 
+        &--pizza::before {
             background-image: url('../img/pizza.png');
 
             @media (min-resolution: 144dpi),
@@ -89,10 +92,8 @@
             }
 
         }
-        &--dish::before {
-            width: 77px;
-            height: 62px;
 
+        &--dish::before {
             background-image: url('../img/dish.png');
 
             @media (min-resolution: 144dpi),
@@ -106,10 +107,8 @@
             }
 
         }
-        &--octopus::before {
-            width: 72px;
-            height: 62px;
 
+        &--octopus::before {
             background-image: url('../img/octopus.png');
 
             @media (min-resolution: 144dpi),
@@ -123,10 +122,8 @@
             }
 
         }
-        &--like::before {
-            width: 61px;
-            height: 64px;
 
+        &--like::before {
             background-image: url('../img/like.png');
 
             @media (min-resolution: 144dpi),
@@ -140,10 +137,8 @@
             }
 
         }
-        &--leaf::before {
-            width: 63px;
-            height: 68px;
 
+        &--leaf::before {
             background-image: url('../img/leaf.png');
 
             @media (min-resolution: 144dpi),
@@ -157,10 +152,8 @@
             }
 
         }
-        &--money::before {
-            width: 75px;
-            height: 60px;
 
+        &--money::before {
             background-image: url('../img/money.png');
 
             @media (min-resolution: 144dpi),
@@ -174,10 +167,8 @@
             }
 
         }
-        &--knife::before {
-            width: 92px;
-            height: 66px;
 
+        &--knife::before {
             background-image: url('../img/knife.png');
 
             @media (min-resolution: 144dpi),
@@ -191,10 +182,8 @@
             }
 
         }
-        &--fish::before {
-            width: 85px;
-            height: 57px;
 
+        &--fish::before {
             background-image: url('../img/fish.png');
 
             @media (min-resolution: 144dpi),
@@ -209,4 +198,74 @@
 
         }
     }
+
+    &__btn {
+        display: block;
+        width: 290px;
+        padding: 15px 0;
+        margin: 0 auto;
+
+        color: $orange;
+
+        border-color: $orange;
+        background-color: white;
+
+        &:hover {
+            color: white;
+            background-color: $orange;
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
+    }
+}
+
+@media(min-width: 480px) {
+    .reasons{
+    
+        &__list { 
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        } 
+
+        &__item {
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+    }
+}
+
+@media(min-width: 705px) {
+    .reasons {
+        &__list {
+            max-height: none !important;
+        }
+
+        &__btn {
+            display: none;
+        }
+    }
+}
+
+@media(min-width: $tablet) {
+
+        .title {
+            &::after,
+            &::before {
+                display: inline-block;
+            }
+        }
+    }
+
+
+@media(min-width: 900px) {
+    .reasons {
+        &__item {
+            width: 250px;
+        }
+    }
+
 }

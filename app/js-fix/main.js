@@ -240,5 +240,20 @@ foodSectionPizza.addEventListener('click', function (event) {
 });
 foodSectionWok.addEventListener('click', function (event) {
   calcPriceWok(foodSectionWok);
+}); //Кнопа показать все
+
+var reasonsBtn = document.querySelector('.reasons__btn');
+var reasonsList = document.querySelector('.reasons__list');
+console.log('213', reasonsList.style);
+reasonsBtn.addEventListener('click', function () {
+  if (reasonsList.style.maxHeight == '' || reasonsList.style.maxHeight == '750px') {
+    reasonsList.style.maxHeight = reasonsList.scrollHeight + 'px';
+    reasonsBtn.textContent = "Спрятать";
+  } else {
+    reasonsList.style.maxHeight = '750px';
+    reasonsBtn.textContent = "Показать все";
+  } // reasonsList.classList.toggle('opened');
+  // console.log(reasonsList.scrollHeight);
+
 });
 objectFitImages();
