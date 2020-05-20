@@ -13,6 +13,12 @@ img {
     height: auto;
 }
 
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 body{
     margin: 0;
     
@@ -28,12 +34,6 @@ body{
     width: 1px;
     height: 1px;
     margin: -1px;
-}
-
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .title {

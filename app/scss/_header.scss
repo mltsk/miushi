@@ -1,4 +1,5 @@
 .header {
+
     position: relative;
 
     display: flex;
@@ -200,7 +201,9 @@
 
     &__item {
         margin-bottom: 35px;
+    }
 
+    &__link {
         text-decoration: none;
         color: inherit;
     }
@@ -324,12 +327,34 @@
     .nav {
 
         margin-top: 20px;
+
+        &__list {
+            display: flex;
+        }
+
         &__item {
+            position: relative;
+
+            display: flex;
+            margin: 0;
+
+            &:hover,
+            &:focus {
+                color: white;
+                background-color: $green;
+
+                .nav__link--menu::after { 
+                    background-image: url('../img/menu-tick-white.png');
+                }
+            }
+        }
+
+        &__link {
             margin: 0;
             padding: 19px 30px;
 
             line-height: 14px;
-
+            text-decoration: none;
             outline: none;
 
             &--menu::after {
@@ -338,16 +363,11 @@
                 display: inline-block;
                 width: 8px;
                 height: 4px;
-                margin-left: 5px;
+                margin-left: 8px;
 
                 background-image: url('../img/menu-tick.png');
                 background-size: cover;
                 vertical-align: middle;
-            }
-
-            &:hover,
-            &:focus {
-                background-color: $green;
             }
 
             &:active {
@@ -374,6 +394,7 @@
 
             &:hover,
             &:focus {
+                color: white;
                 background-color: $green;
 
                 .account__svg {
@@ -398,4 +419,43 @@
             display: block;
         }
     }
+}
+
+.menu {
+
+    &__list {
+        position: absolute;
+        top: 52px;
+        left: 0;
+        z-index: 2;
+
+        display: none;
+        width: 200px;
+
+        background-color: $green;
+    }
+
+    &__link {
+        display: inline-block;
+        width: 100%;
+        padding: 12px 15px;
+
+        font-weight: 500;
+
+        border-bottom: 1px solid #0b5c03;
+        color: white;
+        text-decoration: none;
+    }
+
+    &__link:hover { 
+        background-color: #16b206;
+    }
+
+    &__link:active { 
+        opacity: 0.4;
+    }
+}
+
+.nav__item:hover .menu__list {
+    display: block;
 }

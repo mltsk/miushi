@@ -4,9 +4,7 @@
     padding-bottom: 30px;
     margin: 0 auto;
 
-    // box-shadow: 0px 4px 29px 0 rgba(0, 0, 0, 0.08);
     box-shadow: 28px 0px 45px -68px rgba(0,0,0,1), -28px 0px 45px -68px rgba(0,0,0,1);
-    // box-shadow: 55px 0px 38px -89px #000, -55px 0px 38px -89px #000;
 
     &__wrapper {
         padding-bottom: 30px;
@@ -25,20 +23,6 @@
         background-color: white;
         box-shadow: 0px 4px 29px 0 rgba(0, 0, 0, 0.08);
         border-radius: 10px;
-    }
-
-    &__item--hit::after {
-        content: '';
-        position: absolute;
-        z-index: 2;
-        top: 15px;
-        right: 15px;
-
-        display: block;
-        width: 54px;
-        height: 54px;
-        background-image: url('../img/hit.png');
-        background-size: cover;
     }
 
     &__wrapper-img {
@@ -75,7 +59,7 @@
     }
 
     &__price {
-        font-family: Roboto Slab, serif;
+        font-family: 'Roboto Slab', Arial, serif;
         font-size: 22px;
         font-weight: 800;
     }
@@ -151,7 +135,7 @@
         color: white;
 
         border: none;
-        background-color: #fd4f10;
+        background-color: $orange;
 
         &::after {
             content: '';
@@ -276,7 +260,8 @@
 
     &__supplements-select {
         position: relative;
-
+        
+        height: 25px;
         width: 100%;
         padding: 6px 10px;
 
@@ -286,13 +271,15 @@
         border-radius: 3px;
         background-color: #f2f2f2;
         outline: none;
-        
-
         appearance: none;
 
         &:focus {
             background-color: lightgray;
         }
+    }
+
+    &__wrapper-select select::-ms-expand{
+        display: none;
     }
 
     &__add {
@@ -316,10 +303,6 @@
 
         border-radius: 3px;
         background-color: #f2f2f2;
-    }
-
-    &__add-left-quantity {
-        // font-size: inherit;
     }
 
     &__add-left-btn {
@@ -415,6 +398,12 @@
     }
 }
 
+.food-section--new {
+    .food-section__img {
+        max-width: 190px;
+    }
+}
+
 
 .new {
 
@@ -442,6 +431,7 @@
         font-size: 18px;
         font-weight: 600;
         color: #999999;
+        cursor: pointer;
     }
 
     &__item--current {
@@ -452,3 +442,120 @@
         text-decoration: none;
     }
 }
+
+.hit::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 15px;
+    right: 15px;
+
+    display: block;
+    width: 54px;
+    height: 54px;
+
+    border-radius: 50%;
+    background-image: url('../img/hit.png');
+    background-size: cover;
+    box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.39);
+
+    @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx){ 
+            background-image: url('../img/hit@2x.png');
+    }
+
+    @media (min-resolution: 216dpi),
+        (min-resolution: 2.2dppx) {
+        background-image: url('../img/hit@3x.png');
+    }
+}
+
+.fire::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 15px;
+    right: 15px;
+
+    display: block;
+    width: 54px;
+    height: 54px;
+
+    border-radius: 50%;
+    background-image: url('../img/fire.png');
+    background-size: cover;
+    box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.39);
+
+    @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx){ 
+            background-image: url('../img/fire@2x.png');
+    }
+
+    @media (min-resolution: 216dpi),
+        (min-resolution: 2.2dppx) {
+        background-image: url('../img/fire@3x.png');
+    }
+}
+
+.veg::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 15px;
+    right: 15px;
+
+    display: block;
+    width: 54px;
+    height: 54px;
+
+    border-radius: 50%;
+    background-image: url('../img/veg.png');
+    background-size: cover;
+    box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.39);
+
+    @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx){ 
+            background-image: url('../img/veg@2x.png');
+    }
+
+    @media (min-resolution: 216dpi),
+        (min-resolution: 2.2dppx) {
+        background-image: url('../img/veg@3x.png');
+    }
+}
+
+.food-section--new {
+    .food-section__item::after {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        top: 0px;
+        left: 0px;
+
+        display: block;
+        width: 78px;
+        height: 78px;
+
+        background-image: url('../img/new.png');
+        background-size: cover;
+
+        @media (min-resolution: 144dpi),
+            (min-resolution: 1.5dppx){ 
+                background-image: url('../img/new@2x.png');
+        }
+
+        @media (min-resolution: 216dpi),
+            (min-resolution: 2.2dppx) {
+            background-image: url('../img/new@3x.png');
+        }
+    }
+}
+
+.food-section--rolls {
+    .hit::after,
+    .veg::after,
+    .fire::after {
+        box-shadow: none;
+    }
+}
+

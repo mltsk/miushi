@@ -1,11 +1,10 @@
 .reasons {
-
     max-width: 1140px;
     margin: 0 auto;
 
     &__title {
-
         padding: 0 30px;
+
         &::after,
         &::before {
             display: none;
@@ -222,8 +221,8 @@
 }
 
 @media(min-width: 480px) {
+
     .reasons{
-    
         &__list { 
             flex-direction: row;
             flex-wrap: wrap;
@@ -239,6 +238,7 @@
 }
 
 @media(min-width: 705px) {
+
     .reasons {
         &__list {
             max-height: none !important;
@@ -252,20 +252,20 @@
 
 @media(min-width: $tablet) {
 
-        .title {
-            &::after,
-            &::before {
-                display: inline-block;
-            }
+    .title {
+        &::after,
+        &::before {
+            display: inline-block;
         }
     }
+}
 
 
 @media(min-width: 900px) {
+
     .reasons {
         &__item {
             width: 250px;
         }
     }
-
 }

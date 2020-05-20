@@ -50,8 +50,8 @@
         opacity: 0.5;
         background-color: #000000;
         border: none;
-        cursor: pointer;
         outline: none;
+        cursor: pointer;
 
         transform: translateY(-50%);
 
@@ -85,6 +85,25 @@
             right: 30px;
             
             transform:translateY(-50%) rotate(180deg);
+        }
+    }
+
+    &__btn {
+        display: none;
+        width: 246px;
+        padding: 18px 0;
+        margin: 0;
+
+        color: white;
+        border-color: $orange;
+        background-color: $orange !important;
+
+        &:hover {
+            background-color: #fa6e3b !important;
+        }
+
+        &:active {
+            opacity: 0.5;
         }
     }
 }
@@ -124,11 +143,27 @@
 }
 
 @media(min-width: $desktop) {
-    .slider__item img {
-        height: 675px;    
-    }
 
-    .slider__dots {
-        bottom: 65px;
+    .slider {
+        &__item {
+            position: relative;
+        }
+
+        &__item img {
+            height: 675px;    
+        }
+    
+        &__dots {
+            bottom: 65px;
+        }
+    
+        &__btn {
+            position: absolute;
+            bottom: 150px;
+            left: calc((100vw - 1140px)/2);
+
+            display: block;
+        }
     }
+    
 }

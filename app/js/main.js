@@ -156,7 +156,8 @@ $('.food-section__list').slick({
 const foodSectionSets = document.querySelector('.food-section--sets'),
     foodSectionRolls = document.querySelector('.food-section--rolls'),
     foodSectionPizza = document.querySelector('.food-section--pizza'),
-    foodSectionWok = document.querySelector('.food-section--wok');
+    foodSectionWok = document.querySelector('.food-section--wok'),
+    foodSectionNew = document.querySelector('.food-section--new');
 
     function abc2(n) {
             n += "";
@@ -260,14 +261,40 @@ foodSectionPizza.addEventListener('click', (event)=> {
 foodSectionWok.addEventListener('click', (event)=> {
     calcPriceWok(foodSectionWok);
 });
-    
+
+foodSectionNew.addEventListener('click', (event)=> {
+    calcPrice(foodSectionNew);
+});
+
+//табы новинки акции
+
+const newWrapper = document.querySelector('.new__wrapper'),
+    newItem = newWrapper.querySelectorAll('.new__item'),
+    foodSectionContainerNew = newWrapper.querySelector('.food-section__container-new');
+
+newWrapper.addEventListener('click',(event)=> {
+    let target = event.target;
+
+    for (let i = 0; i < newItem.length; i++) {
+        if(target == newItem[0]) {
+            newItem[1].classList.remove('new__item--current');
+            newItem[0].classList.add('new__item--current');
+            foodSectionContainerNew.style.transform = 'translateX(0%)'
+        }
+
+        if(target == newItem[1]) {
+            newItem[0].classList.remove('new__item--current');
+            newItem[1].classList.add('new__item--current');
+            foodSectionContainerNew.style.transform = 'translateX(-50%)'
+        }     
+    }
+});
+
 
 //Кнопа показать все
 
 const reasonsBtn = document.querySelector('.reasons__btn');
 let reasonsList = document.querySelector('.reasons__list');
-
-console.log('213', reasonsList.style);
 
 reasonsBtn.addEventListener('click', ()=> {
     
@@ -278,11 +305,36 @@ reasonsBtn.addEventListener('click', ()=> {
         reasonsList.style.maxHeight = '750px';
         reasonsBtn.textContent = "Показать все";
     }
+});
 
-    // reasonsList.classList.toggle('opened');
-    // console.log(reasonsList.scrollHeight);
-})
+const aboutBtn = document.querySelector('.about__btn');
+let aboutInformation = document.querySelector('.about__information');
 
+aboutBtn.addEventListener('click', ()=> {
+    
+    if ((aboutInformation.style.maxHeight == '') || (aboutInformation.style.maxHeight == '400px')) {    
+        aboutInformation.style.maxHeight = reasonsList.scrollHeight + 'px';
+        aboutBtn.textContent = "Спрятать";
+    } else {
+        aboutInformation.style.maxHeight = '400px';
+        aboutBtn.textContent = "Показать все";
+    }
+});
 
+//футер
+
+let footerTitle = document.querySelectorAll('.footer__title');
+
+for (let i = 0; i < footerTitle.length; i++) {
+    footerTitle[i].addEventListener('click', function() {
+        this.classList.toggle('active');
+        let content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        }
+    });
+};
 
 objectFitImages();

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Miushi</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,600&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/style.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
 </head>
@@ -31,11 +32,34 @@
                 <button class="header__call-back btn">Обратный звонок</button>
             </div>
             <nav class="header__nav nav towrap">
-                <a href="#" class="nav__item nav__item--menu">Меню</a>
-                <a href="#" class="nav__item">Акции и скидки</a>
-                <a href="#" class="nav__item">Доставка и оплата</a>
-                <a href="#" class="nav__item">Новости</a>
-                <a href="#" class="nav__item">Контакты</a>
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--menu">
+                        <a href="#" class="nav__link nav__link--menu menu">Меню</a>
+                        <ul class="menu__list">
+                            <li class="menu__item"><a class="menu__link" href="#">Суши</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Гунканы</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Инари</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Супы</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Салаты</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Горячие закуски</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Десерты</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Напитки</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Дополительно</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Акции и скидки</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Доставка и оплата</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Новости</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Контакты</a>
+                    </li>
+                </ul>
             </nav>
             <button class="header__box-close towrap" aria-label="Закрыть меню"></button>
         </div>
@@ -64,6 +88,7 @@
                     <source media="(min-width: 550px)" srcset="img-content/slider-tablet.jpg 1x, img-content/slider-tablet@2x.jpg 2x, img-content/slider-tablet@3x.jpg 3x">
                     <img class="poly-ie" class="slider__img" src="img-content/slider-mobile.jpg" srcset="img-content/slider-mobile@2x.jpg 2x, img-content/slider-mobile@3x.jpg 3x" alt="Счастливые часы с 11 до 16 в будние дни">
                 </picture>
+                <button class="slider__btn btn">Подробнее</button>
             </li>
             <li class="slider__item">
                 <picture>
@@ -71,6 +96,7 @@
                     <source media="(min-width: 550px)" srcset="img-content/slider-tablet.jpg 1x, img-content/slider-tablet@2x.jpg 2x, img-content/slider-tablet@3x.jpg 3x">
                     <img class="poly-ie" class="slider__img" src="img-content/slider-mobile.jpg" srcset="img-content/slider-mobile@2x.jpg 2x, img-content/slider-mobile@3x.jpg 3x" alt="Счастливые часы с 11 до 16 в будние дни">
                 </picture>
+                <button class="slider__btn btn">Подробнее</button>
             </li>
             <li class="slider__item">
                 <picture>
@@ -78,6 +104,7 @@
                     <source media="(min-width: 550px)" srcset="img-content/slider-tablet.jpg 1x, img-content/slider-tablet@2x.jpg 2x, img-content/slider-tablet@3x.jpg 3x">
                     <img class="poly-ie" class="slider__img" src="img-content/slider-mobile.jpg" srcset="img-content/slider-mobile@2x.jpg 2x, img-content/slider-mobile@3x.jpg 3x" alt="Счастливые часы с 11 до 16 в будние дни">
                 </picture>
+                <button class="slider__btn btn">Подробнее</button>
             </li>
         </ul>
     </section>
@@ -86,7 +113,7 @@
         <h2 class="food-section__title title">Сеты</h2>
         <ul class="food-section__list">
             <li class="food-section__wrapper">
-                <div class="food-section__item food-section__item--hit">
+                <div class="food-section__item hit">
                     <img class="food-section__img" src="img-content/set-1.jpg" srcset="img-content/set-1@2x.jpg 2x, img-content/set-1@3x.jpg 3x">
                     <h3 class="food-section__name">Сет №1</h3>
                     <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
@@ -118,7 +145,7 @@
                 </div>
             </li>
             <li class="food-section__wrapper">
-                <div class="food-section__item">
+                <div class="food-section__item fire">
                     <img class="food-section__img" src="img-content/set-3.jpg" srcset="img-content/set-3@2x.jpg 2x, img-content/set-3@3x.jpg 3x">
                     <h3 class="food-section__name">Сет №3</h3>
                     <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
@@ -134,7 +161,7 @@
                 </div>
             </li>
             <li class="food-section__wrapper">
-                <div class="food-section__item">
+                <div class="food-section__item hit">
                     <img class="food-section__img" src="img-content/set-4.jpg" srcset="img-content/set-4@2x.jpg 2x, img-content/set-4@3x.jpg 3x">
                     <h3 class="food-section__name">Сет №4</h3>
                     <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
@@ -182,7 +209,7 @@
                 </div>
             </li>
             <li class="food-section__wrapper">
-                <div class="food-section__item">
+                <div class="food-section__item fire">
                     <img class="food-section__img" src="img-content/set-3.jpg" srcset="img-content/set-3@2x.jpg 2x, img-content/set-3@3x.jpg 3x">
                     <h3 class="food-section__name">Сет №7</h3>
                     <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
@@ -198,7 +225,7 @@
                 </div>
             </li>
             <li class="food-section__wrapper">
-                <div class="food-section__item">
+                <div class="food-section__item veg">
                     <img class="food-section__img" src="img-content/set-4.jpg" srcset="img-content/set-4@2x.jpg 2x, img-content/set-4@3x.jpg 3x">
                     <h3 class="food-section__name">Сет №8</h3>
                     <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
@@ -220,7 +247,7 @@
         <h2 class="food-section__title title">Роллы</h2>
         <ul class="food-section__list">
             <li class="food-section__wrapper">
-                <div class="food-section__item">
+                <div class="food-section__item fire">
                     <div class="food-section__wrapper-img">
                         <img class="food-section__img" src="img-content/roll-1.jpg" srcset="img-content/roll-1@2x.jpg 2x, img-content/roll-1@3x.jpg 3x">
                     </div>
@@ -238,7 +265,7 @@
                 </div>
             </li>
             <li class="food-section__wrapper">
-                <div class="food-section__item">
+                <div class="food-section__item hit">
                     <div class="food-section__wrapper-img">
                         <img class="food-section__img" src="img-content/roll-2.jpg" srcset="img-content/roll-2@2x.jpg 2x, img-content/roll-2@3x.jpg 3x">
                     </div>
@@ -853,8 +880,8 @@
     <div class="new__wrapper">
         <div class="new__container">
             <ul class="new__list">
-                <li class="new__item new__item--current"><a class="new__link" href="">Новинки</a></li>
-                <li class="new__item"><a class="new__link" href="">Акции</a></li>
+                <li class="new__item new__item--current">Новинки</li>
+                <li class="new__item">Акции</li>
             </ul>
             <section class="food-section food-section--new">
                 <ul class="food-section__list">
@@ -1045,26 +1072,137 @@
         </ul>
     </section>
 
-    <section class="about">
-        <div class="about__wrapper">
-            <div class="about__box-wrapper">
-                <div class="about__box">
-                    <span class="about__question">Есть вопросы?</span>
-                    <h2 class="about__title">Оставьте свои&nbsp;контакты</h2>
-                    <form class="about__form" action="">
-                        <input class="about__input about__name" type="text" name="name" placeholder="Имя">
-                        <input class="about__input about__phone" type="tel" name="phone" placeholder="Телефон">
-                        <button class="about__btn btn" type="submit">Отправить</button>
+    <section class="feedback">
+        <div class="feedback__wrapper">
+            <div class="feedback__box-wrapper">
+                <div class="feedback__box">
+                    <span class="feedback__question">Есть вопросы?</span>
+                    <h2 class="feedback__title">Оставьте свои&nbsp;контакты</h2>
+                    <form class="feedback__form" action="">
+                        <input class="feedback__input feedback__name" type="text" name="name" placeholder="Имя">
+                        <input class="feedback__input feedback__phone" type="tel" name="phone" placeholder="Телефон">
+                        <button class="feedback__btn btn" type="submit">Отправить</button>
                     </form>
-                    <p class="about__agreement">Нажимая на кнопку «Отправить», вы даете согласие на обработку своих персональных 
-                        данных.
+                    <p class="feedback__agreement">
+                        Нажимая на кнопку «Отправить», вы даете согласие на обработку своих персональных данных.
                     </p>
                 </div>
             </div>
         </div>
     </section>
-    
-  
+
+    <section class="about">
+        <h2 class="about__title title">О компании</h2>
+        <h3 class="about__subtitle">Заказ и доставка роллов, пиццы и WOK(Вок) в городе Курск</h3>
+        <div class="about__information">
+            <picture>
+                <img class="about__img" width="277" height="478" src="img/about.jpg" srcset="img/about@2x.jpg 2x, img/about@3x.jpg 3x" alt="Пример сервировки блюда">
+            </picture>
+            <p class="about__text">
+                Суши МИЮШИ открылись в октябре 2012г. и уже завоевали успех у тех, кто ценит японскую кухню и качественное приготовление блюд.
+            </p>
+            <p class="about__text">
+                С 2013 года мы осуществляем не только доставку на дом, теперь для вас открыт наш уютный небольшой зал. Придя сюда, вы сможете плотно пообедать, насладиться прекрасными напитками, посидеть с друзьями или обзавестись новыми знакомствами.
+            </p>
+            <p class="about__text">
+                Открывая зал, Мы преследовали цель предоставить своим посетителям максимум удобства и комфорта, поэтому, придя сюда в первый раз, вы почувствуете себя как рыба в воде, окунувшись в домашнюю и теплую обстановку!
+            </p>
+            <p class="about__text">
+                Особое внимание мы уделяем организации доставки суши и других блюд, которая осуществляется только по г. Курске. Четкая и слаженная работа курьеров позволяет максимально сократить время от приготовления блюда до его попадания на стол заказчику. Как правило, оно составляет от 20 до 60 минут в зависимости от местонахождения клиента. Операторы службы доставки всегда осведомлены обо всех изменениях времени доставки и предупреждают клиентов заранее, а при возможных серьезных задержках в связи с дорожной ситуацией предложат Вам альтернативу. Мы беремся только за ту работу, которую можем выполнить в срок.
+            </p>
+            <p class="about__text">
+                В меню суши МИЮШИ представлено все многообразие японской кухни. Классические суши, и роллы приготовлены в соответствии с традиционными рецептами. Для любителей нежных и тающих во рту блюд предлагаются роллы с мясом краба, а также для больших любителей копченого угря потрясающий ролл Дракон. Для желающих пробовать что-то новое и необычное – острые ГУНКАНЫ и новинка нашего меню - ИНАРИ, широкий выбор горячих роллов. Большим компаниям будет удобно заказать суши и роллы, объединенные в сеты, включающие сразу несколько видов каждого из этих блюд. Кроме того, меню суши МИЮШИ не ограничено только японской кухней, здесь всегда можно заказать горячие и холодные блюда ЛАПША или РИС WOK с различными мясными и рыбными наполнителями, салаты, горячие закуски и различные напитки.
+            </p> 
+        </div>
+        <button class="about__btn btn">Показать всё</button>
+    </section>
+
+    <section class="footer">
+        <div class="footer__container">
+            <div class="footer__upper">
+                <div class="footer__box footer__box--menu">
+                    <h3 class="footer__title footer__title--menu">Меню</h3>
+                    <div class="footer__list-wrapper">
+                        <ul class="footer__list footer__list--menu">
+                            <li class="footer__item"><a class="footer__link" href="#">Суши</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Гунканы</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Инари</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Супы</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Салаты</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Горячие закуски</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Десерты</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Напитки</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Дополительно</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__box footer__box--sets">
+                    <h3 class="footer__title">Сеты</h3>
+                    <div class="footer__list-wrapper">
+                        <ul class="footer__list footer__list--sets-1">
+                            <li class="footer__item"><a class="footer__link" href="#">До 500 руб.</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">До 1000 руб. (для двоих)</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">До 1500 руб (для двоих - троих)</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">До 2000 руб (большая кампания)</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">от 2000 руб (очень большая кампания)</a></li>
+                        </ul>
+                        <ul class="footer__list footer__list--sets-2">
+                            <li class="footer__item"><a class="footer__link" href="#">С угрем</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Горячие</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Запеченные</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Суши</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__box footer__box--rolls">
+                    <h3 class="footer__title">Роллы</h3>
+                    <div class="footer__list-wrapper">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a class="footer__link" href="#">Традиционные/Классические</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Простые</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Теплые</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Запеченые</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Вегитарианские</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__box footer__box--wok">
+                    <h3 class="footer__title">Вок</h3>
+                    <div class="footer__list-wrapper">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a class="footer__link" href="#">Яичная</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Удон</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Гречневая</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Стеклянная</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Рис</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__box footer__box--wok">
+                    <h3 class="footer__title">Пицца</h3>
+                    <div class="footer__list-wrapper">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a class="footer__link" href="#">Мясная</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Рыбная</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Сырная</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Вегитарианская</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="footer__bottom">
+                <span class="footer__copyright">МИЮШИ © 2017</span>
+                <a class="footer__agreement" href="#">Соглашение на обработку персональных данных</a>
+                <ul class="footer__social">
+                    <li class="footer__social-item"><a class="footer__social-link footer__social-link--ig" aria-label="Инстаграмм" href="#"></a></li>
+                    <li class="footer__social-item"><a class="footer__social-link footer__social-link--vk" aria-label="Вконтакте" href="#"></a></li>
+                    <li class="footer__social-item"><a class="footer__social-link footer__social-link--fb" aria-label="Фейсбук" href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
     <script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js"></script>
     <script src="js/ofi.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

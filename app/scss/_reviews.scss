@@ -1,5 +1,4 @@
 .reviews {
-
     max-width: 1140px;
     margin: 0 auto;
 
@@ -29,7 +28,6 @@
 @media(min-width: $tablet) {
 
     .reviews {
-
         &__list {
             flex-direction: row;
             justify-content: space-around;
@@ -40,7 +38,6 @@
 @media(min-width: 900px) {
 
     .reviews {
-
         &__list {
             flex-direction: row;
             justify-content: space-around;
@@ -53,20 +50,20 @@
 }
 
 @media(min-width: $desktop) {
+
     .reviews {
+        &__list {
+            justify-content: space-between;
+        }
 
-    &__list {
-        justify-content: space-between;
-    }
+        &__item {
+            width: 360px;
+            height: 524px;
+        }
 
-    &__item {
-        width: 360px;
-        height: 524px;
-    }
-
-    &__list {
-        flex-direction: row;
-        justify-content: space-around;
-    }
+        &__list {
+            flex-direction: row;
+            justify-content: space-around;
+        }
     }
 }
