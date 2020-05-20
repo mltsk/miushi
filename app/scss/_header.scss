@@ -20,7 +20,7 @@
         background-color: rgba($color: #000, $alpha: 0.4);
         overflow: hidden;
 
-        animation-duration: 1s;
+        animation-duration: .5s;
     }
     
     &__toggle {
@@ -137,6 +137,17 @@
         color: $green;
         
         background-color: white;
+        outline: none;
+
+        &:hover,
+        &:focus {
+            color: white;
+            background-color: $green;
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
     }
 }
 
@@ -181,6 +192,7 @@
     line-height: 14px;
     font-weight: 600;
     text-transform: uppercase;
+
     &__item {
         margin-bottom: 35px;
 
@@ -198,7 +210,7 @@
     &__item {
         margin-top: 20px;
         margin-left: -3px;
-
+        
         &::before {
             content: '';
 
@@ -213,10 +225,18 @@
         }
 
         &--email::before {
-            width: 16px;
-            height: 12px;
+            width: 12px;
+            height: 16px;
             background-image: url('../svg/envelope.svg');
-            background-position: center;
+            background-position: bottom;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
         }
     }
 }
@@ -250,6 +270,7 @@
 
         max-width: 1160px;
         margin: 0 auto;
+        padding-top: 10px;
 
         &__toggle {
             display: none;
@@ -271,6 +292,10 @@
     .contacts {
         display: flex;
         margin: 0;
+        
+        &__item {
+            margin: 0;
+        }
 
         &__item--address {
             margin-right: 150px;
@@ -279,7 +304,7 @@
 
     .phone {
         display: flex;
-
+        align-items: center;
         margin: 0;
 
         &__wrapper {
@@ -289,11 +314,14 @@
 
     .nav {
 
+        margin-top: 20px;
         &__item {
             margin: 0;
             padding: 19px 30px;
 
             line-height: 14px;
+
+            outline: none;
 
             &--menu::after {
                 content: '';
@@ -308,43 +336,57 @@
                 vertical-align: middle;
             }
 
-            &:hover {
+            &:hover,
+            &:focus {
                 background-color: $green;
+            }
+
+            &:active {
+                opacity: 0.7;
             }
         }
     }
 
     .account {
+        display: flex;
+        margin-top: 20px;
 
         &__item {
+            display: flex;
+            padding: 15px 25px;
+            
             font-weight: 600;
             text-transform: uppercase;
+            text-decoration: none;
+            align-items: center;
+            line-height: 14px;
+
+            outline: none;
+
+            &:hover,
+            &:focus {
+                background-color: $green;
+
+                .account__svg {
+                    fill: #fff;
+                }
+            }
+
+            &:active {
+                opacity: 0.7;
+            }
 
             &--first {
                 margin: 0;
             }
         }
 
-        &__link {
-            padding: 19px 25px;
-
-            line-height: 14px;
-
-            &:hover {
-                background-color: $green;
-            }
-        }
-
         &__svg {
-            position: relative;
-            top: 5px;
-
-            margin-right: 5px;
+            margin-right: 10px;
         }
 
         &__span {
-            display: inline-block;
-            vertical-align: middle;
+            display: block;
         }
     }
 }

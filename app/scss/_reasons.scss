@@ -1,0 +1,212 @@
+.reasons {
+
+    &__title {
+
+        padding: 0 30px;
+        &::after,
+        &::before {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 160px;
+        max-width: 195px;
+        margin: 40px 0;
+
+        text-align: center;
+        font-size: 16px;
+        color: #4d4d4d;
+
+        &::before {
+            content: '';
+
+            display: block;
+            margin-bottom: 30px;
+
+            background-size: contain;
+        }
+
+        &--kitchen::before {
+            width: 68px;
+            height: 64px;
+
+            background-image: url('../img/kitchen.png');
+
+            @media (min-resolution: 144dpi),
+            (min-resolution: 1.5dppx){ 
+            background-image: url('../img/kitchen@2x.png');
+        }
+
+            @media (min-resolution: 216dpi),
+            (min-resolution: 2.2dppx) {
+                background-image: url('../img/kitchen@3x.png');
+            }
+
+        }
+
+        &--rice::before {
+            width: 64px;
+            height: 73px;
+
+            background-image: url('../img/rice.png');
+
+            @media (min-resolution: 144dpi),
+            (min-resolution: 1.5dppx){ 
+            background-image: url('../img/rice@2x.png');
+        }
+
+            @media (min-resolution: 216dpi),
+            (min-resolution: 2.2dppx) {
+                background-image: url('../img/rice@3x.png');
+            }
+
+        }
+        &--pizza::before {
+            width: 62px;
+            height: 72px;
+
+            background-image: url('../img/pizza.png');
+
+            @media (min-resolution: 144dpi),
+            (min-resolution: 1.5dppx){ 
+            background-image: url('../img/pizza@2x.png');
+        }
+
+            @media (min-resolution: 216dpi),
+            (min-resolution: 2.2dppx) {
+                background-image: url('../img/pizza@3x.png');
+            }
+
+        }
+        &--dish::before {
+            width: 77px;
+            height: 62px;
+
+            background-image: url('../img/dish.png');
+
+            @media (min-resolution: 144dpi),
+            (min-resolution: 1.5dppx){ 
+            background-image: url('../img/dish@2x.png');
+        }
+
+            @media (min-resolution: 216dpi),
+            (min-resolution: 2.2dppx) {
+                background-image: url('../img/dish@3x.png');
+            }
+
+        }
+        &--octopus::before {
+            width: 72px;
+            height: 62px;
+
+            background-image: url('../img/octopus.png');
+
+            @media (min-resolution: 144dpi),
+            (min-resolution: 1.5dppx){ 
+            background-image: url('../img/octopus@2x.png');
+        }
+
+            @media (min-resolution: 216dpi),
+            (min-resolution: 2.2dppx) {
+                background-image: url('../img/octopus@3x.png');
+            }
+
+        }
+        &--like::before {
+            width: 61px;
+            height: 64px;
+
+            background-image: url('../img/like.png');
+
+            @media (min-resolution: 144dpi),
+            (min-resolution: 1.5dppx){ 
+            background-image: url('../img/like@2x.png');
+        }
+
+            @media (min-resolution: 216dpi),
+            (min-resolution: 2.2dppx) {
+                background-image: url('../img/like@3x.png');
+            }
+
+        }
+        &--leaf::before {
+            width: 63px;
+            height: 68px;
+
+            background-image: url('../img/leaf.png');
+
+            @media (min-resolution: 144dpi),
+            (min-resolution: 1.5dppx){ 
+            background-image: url('../img/leaf@2x.png');
+        }
+
+            @media (min-resolution: 216dpi),
+            (min-resolution: 2.2dppx) {
+                background-image: url('../img/leaf@3x.png');
+            }
+
+        }
+        &--money::before {
+            width: 75px;
+            height: 60px;
+
+            background-image: url('../img/money.png');
+
+            @media (min-resolution: 144dpi),
+            (min-resolution: 1.5dppx){ 
+            background-image: url('../img/money@2x.png');
+        }
+
+            @media (min-resolution: 216dpi),
+            (min-resolution: 2.2dppx) {
+                background-image: url('../img/money@3x.png');
+            }
+
+        }
+        &--knife::before {
+            width: 92px;
+            height: 66px;
+
+            background-image: url('../img/knife.png');
+
+            @media (min-resolution: 144dpi),
+            (min-resolution: 1.5dppx){ 
+            background-image: url('../img/knife@2x.png');
+        }
+
+            @media (min-resolution: 216dpi),
+            (min-resolution: 2.2dppx) {
+                background-image: url('../img/knife@3x.png');
+            }
+
+        }
+        &--fish::before {
+            width: 85px;
+            height: 57px;
+
+            background-image: url('../img/fish.png');
+
+            @media (min-resolution: 144dpi),
+            (min-resolution: 1.5dppx){ 
+            background-image: url('../img/fish@2x.png');
+        }
+
+            @media (min-resolution: 216dpi),
+            (min-resolution: 2.2dppx) {
+                background-image: url('../img/fish@3x.png');
+            }
+
+        }
+    }
+}

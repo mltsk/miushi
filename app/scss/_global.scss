@@ -36,6 +36,51 @@ ul {
     padding: 0;
 }
 
+.title {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 75px;
+
+    font-family: "Lemon Tuesday";
+    font-size: 44px;
+    text-align: center;
+    color: #32505a;
+
+    &::after,
+    &::before {
+        content: '';
+
+        display: inline-block;
+        width: 74px;
+        height: 27px;
+
+        background-image: url('../img/title-arrow.png');
+        background-size: cover;
+
+        @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+            background-image: url('../img/title-arrow@2x.png');
+        }
+
+        @media (min-resolution: 216dpi),
+        (min-resolution: 2.2dppx) {
+            background-image: url('../img/title-arrow@3x.png');
+        }
+    }
+
+    &::before {
+        margin-right: 20px;
+        transform: scale(-1, 1);
+    }
+
+    &::after {
+        margin-left: 20px;
+    }
+}
+
 .btn {
     border-radius: 5px;
     border: solid 1px #1fba0a;

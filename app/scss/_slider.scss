@@ -1,0 +1,134 @@
+.slider {
+    position: relative;
+
+    margin: 0 auto;
+    max-width: 1920px;
+
+    &__dots {
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+
+        display: flex;
+
+        transform: translateX(-50%);
+
+        & button{
+            width: 12px;
+            height: 12px;
+            padding: 0;
+        
+            font-size: 0;
+        
+            background-color: transparent;
+            border: 2px solid #c2c2c2;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        & li + li {
+            margin-left: 20px;
+        }
+    }
+
+    .slick-active button{
+        background-color: $green;
+        border: none;
+    }
+
+    &__arrows {
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        z-index: 1;
+
+        width: 53px;
+        height: 53px;
+        padding: 0;
+
+        border-radius: 50%;
+        opacity: 0.5;
+        background-color: #000000;
+        border: none;
+        cursor: pointer;
+        outline: none;
+
+        transform: translateY(-50%);
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &:focus {
+            opacity: 1;
+        }
+
+        &::before {
+            content: '';
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            display: block;
+            width: 10px;
+            height: 17px;
+            margin-top: -9px;
+            margin-left: -7px;
+
+            background-image: url(../img/slider-arrows.png);
+            background-size: cover;
+        }
+
+        &--next {
+            left: auto;
+            right: 30px;
+            
+            transform:translateY(-50%) rotate(180deg);
+        }
+    }
+}
+
+
+.slider__item img {
+    height: 242px;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.poly-ie {
+	object-fit: cover;
+	object-position: center;
+	font-family: 'object-fit: cover; object-position: center;';
+}
+
+@media(min-width: 680px) {
+    .slider__item img {
+        height: 320px;    
+    }
+}
+
+@media(min-width: $tablet) {
+    .slider__item img {
+        height: 420px;    
+    }
+
+    .slider__dots {
+        bottom: 35px;
+
+        & li + li {
+            margin-left: 25px;
+        }
+    }
+}
+
+@media(min-width: $desktop) {
+    .slider__item img {
+        height: 675px;    
+    }
+
+    .slider__dots {
+        bottom: 65px;
+    }
+}
