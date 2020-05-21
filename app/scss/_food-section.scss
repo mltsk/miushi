@@ -405,7 +405,7 @@
 }
 
 
-.new {
+.offers {
 
     &__wrapper {
         background-image: url('../img/new-bg.png');
@@ -524,32 +524,31 @@
     }
 }
 
-.food-section--new {
-    .food-section__item::after {
-        content: '';
-        position: absolute;
-        z-index: 2;
-        top: 0px;
-        left: 0px;
+.new::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
 
-        display: block;
-        width: 78px;
-        height: 78px;
+    display: block;
+    width: 78px;
+    height: 78px;
 
-        background-image: url('../img/new.png');
-        background-size: cover;
+    background-image: url('../img/new.png');
+    background-size: cover;
 
-        @media (min-resolution: 144dpi),
-            (min-resolution: 1.5dppx){ 
-                background-image: url('../img/new@2x.png');
-        }
+    @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx){ 
+            background-image: url('../img/new@2x.png');
+    }
 
-        @media (min-resolution: 216dpi),
-            (min-resolution: 2.2dppx) {
-            background-image: url('../img/new@3x.png');
-        }
+    @media (min-resolution: 216dpi),
+        (min-resolution: 2.2dppx) {
+        background-image: url('../img/new@3x.png');
     }
 }
+
 
 .food-section--rolls {
     .hit::after,

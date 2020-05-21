@@ -1,12 +1,10 @@
 "use strict";
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
+//всплывающие меню
 var headerToggle = document.querySelector('.header__toggle'),
     headerBoxClose = document.querySelector('.header__box-close'),
     headerBoxShadow = document.querySelector('.header__box-shadow');
-var headerBox = document.querySelector('.header__box'); //всплывающие меню
-
+var headerBox = document.querySelector('.header__box');
 headerToggle.addEventListener('click', function () {
   var headerBox = document.querySelector('.header__box');
   headerBox.style.left = '0';
@@ -23,14 +21,12 @@ headerBoxClose.addEventListener('click', function () {
 }); // управление оберткой в меню
 
 function unwrap(wrapper) {
-  // place childNodes in document fragment
   var docFrag = document.createDocumentFragment();
 
   while (wrapper.firstChild) {
     var child = wrapper.removeChild(wrapper.firstChild);
     docFrag.appendChild(child);
-  } // replace wrapper with document fragment
-
+  }
 
   wrapper.parentNode.replaceChild(docFrag, wrapper);
 }
@@ -70,8 +66,84 @@ $('.slider__list').slick({
       nextArrow: ''
     }
   }]
-});
-$('.food-section__list').slick({
+}); // $('.food-section__list').slick({
+//   infinite: true,
+//   dots: true,
+//   speed: 700,
+//   slidesToShow: 4,
+//   slidesToScroll: 4,
+//   dotsClass: 'food-section__dots',
+//   prevArrow: '<button class="food-section__arrows food-section__arrows--prev" aria-label="Предыдущий слайд"></button>',
+//   nextArrow: '<button class="food-section__arrows food-section__arrows--next" aria-label="Следующий слайд"></button>',
+//   responsive: [
+//     {
+//       breakpoint: 940,
+//       settings: {
+//         infinite: false,
+//         dots: true,
+//         slidesToShow: 4,
+//         slidesToScroll: 4,
+//       }
+//     },
+//     {
+//       breakpoint: 720,
+//       settings: {
+//         slidesToShow: 2,
+//         slidesToScroll: 2,
+//       }
+//     },
+//     {
+//       breakpoint: 480,
+//       settings: {
+//         focusOnSelect: true,
+//         centerMode: true,
+//         centerPadding: '80px',
+//         dots: false,
+//         arrows: false,
+//         slidesToShow: 1,
+//         slidesToScroll: 1
+//       }
+//     },
+//     {
+//       breakpoint: 420,
+//       settings: {
+//         focusOnSelect: true,
+//         centerMode: true,
+//         centerPadding: '60px',
+//         dots: false,
+//         arrows: false,
+//         slidesToShow: 1,
+//         slidesToScroll: 1
+//       }
+//     },
+//     {
+//       breakpoint: 380,
+//       settings: {
+//         focusOnSelect: true,
+//         centerMode: true,
+//         centerPadding: '50px',
+//         dots: false,
+//         arrows: false,
+//         slidesToShow: 1,
+//         slidesToScroll: 1
+//       }
+//     },
+//     {
+//       breakpoint: 340,
+//       settings: {
+//         focusOnSelect: true,
+//         centerMode: true,
+//         centerPadding: '40px',
+//         dots: false,
+//         arrows: false,
+//         slidesToShow: 1,
+//         slidesToScroll: 1
+//       }
+//     }
+//   ]
+// });
+
+$('.food-section__list--new').slick({
   infinite: true,
   dots: true,
   speed: 700,
@@ -82,11 +154,9 @@ $('.food-section__list').slick({
   nextArrow: '<button class="food-section__arrows food-section__arrows--next" aria-label="Следующий слайд"></button>',
   responsive: [{
     breakpoint: 940,
-    settings: _defineProperty({
-      dots: true,
-      slidesToShow: 3,
-      slidesToScroll: 3
-    }, "dots", true)
+    settings: {
+      slidesToShow: 3
+    }
   }, {
     breakpoint: 720,
     settings: {
@@ -138,6 +208,48 @@ $('.food-section__list').slick({
       slidesToScroll: 1
     }
   }]
+});
+var filtered = true;
+$('.food-section__list--new').slick('slickFilter', ':has(.new)'); // $('.js-filter-new').on('click', function(){
+//     if (!($('.js-filter-new').hasClass('new__item--current'))){
+//         $('.food-section__list--new').slick('slickUnfilter');
+//         filtered = false;
+//         $('.food-section__list--new').slick('slickFilter',':has(.new)');
+//         filtered = true;
+//         $('.js-filter-new').addClass("offers__item--current");
+//         $('.js-filter-promotion').removeClass("offers__item--current");
+//     }
+// });
+// $('.js-filter-promotion').on('click', function(){
+//     if (!($('.js-filter-promotion').hasClass('new__item--current'))){
+//         $('.food-section__list--new').slick('slickUnfilter');
+//         filtered = false;
+//         $('.food-section__list--new').slick('slickFilter',':has(.fire)');
+//         filtered = true;
+//         $('.js-filter-new').removeClass("offers__item--current");
+//         $('.js-filter-promotion').addClass("offers__item--current");
+//     }
+// });
+
+$('.js-filter-new').on('click', function () {
+  if (!$('.js-filter-new').hasClass('new__item--current')) {
+    $('.food-section__list--new').slick('slickUnfilter');
+    filtered = false;
+    $('.food-section__list--new').slick('slickFilter', ':has(.new)');
+    filtered = true;
+    $('.js-filter-new').addClass("offers__item--current");
+    $('.js-filter-promotion').removeClass("offers__item--current");
+  }
+});
+$('.js-filter-promotion').on('click', function () {
+  if (!$('.js-filter-promotion').hasClass('new__item--current')) {
+    $('.food-section__list--new').slick('slickUnfilter');
+    filtered = false;
+    $('.food-section__list--new').slick('slickFilter', ':has(.fire)');
+    filtered = true;
+    $('.js-filter-new').removeClass("offers__item--current");
+    $('.js-filter-promotion').addClass("offers__item--current");
+  }
 }); // Калькулятор карточек
 
 var foodSectionSets = document.querySelector('.food-section--sets'),
@@ -245,27 +357,25 @@ foodSectionWok.addEventListener('click', function (event) {
 foodSectionNew.addEventListener('click', function (event) {
   calcPrice(foodSectionNew);
 }); //табы новинки акции
-
-var newWrapper = document.querySelector('.new__wrapper'),
-    newItem = newWrapper.querySelectorAll('.new__item'),
-    foodSectionContainerNew = newWrapper.querySelector('.food-section__container-new');
-newWrapper.addEventListener('click', function (event) {
-  var target = event.target;
-
-  for (var i = 0; i < newItem.length; i++) {
-    if (target == newItem[0]) {
-      newItem[1].classList.remove('new__item--current');
-      newItem[0].classList.add('new__item--current');
-      foodSectionContainerNew.style.transform = 'translateX(0%)';
-    }
-
-    if (target == newItem[1]) {
-      newItem[0].classList.remove('new__item--current');
-      newItem[1].classList.add('new__item--current');
-      foodSectionContainerNew.style.transform = 'translateX(-50%)';
-    }
-  }
-}); //Кнопа показать все
+// const newWrapper = document.querySelector('.new__wrapper'),
+//     newItem = newWrapper.querySelectorAll('.new__item'),
+//     foodSectionContainerNew = newWrapper.querySelector('.food-section__container-new');
+// newWrapper.addEventListener('click',(event)=> {
+//     let target = event.target;
+//     for (let i = 0; i < newItem.length; i++) {
+//         if(target == newItem[0]) {
+//             newItem[1].classList.remove('new__item--current');
+//             newItem[0].classList.add('new__item--current');
+//             foodSectionContainerNew.style.transform = 'translateX(0%)'
+//         }
+//         if(target == newItem[1]) {
+//             newItem[0].classList.remove('new__item--current');
+//             newItem[1].classList.add('new__item--current');
+//             foodSectionContainerNew.style.transform = 'translateX(-50%)'
+//         }     
+//     }
+// });
+//Кнопа показать все
 
 var reasonsBtn = document.querySelector('.reasons__btn');
 var reasonsList = document.querySelector('.reasons__list');
