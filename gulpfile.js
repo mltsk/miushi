@@ -34,7 +34,7 @@ gulp.task('scss', function(){
 gulp.task('css', function(){
   return gulp.src([
     'node_modules/normalize.css/normalize.css',
-    'node_modules/slick-carousel/slick/slick.css',
+    'node_modules/slick-carousel-go-to-thumb/slick/slick.css',
   ])
     .pipe(concat('_libs.scss'))
     .pipe(gulp.dest('app/scss'))
@@ -51,15 +51,16 @@ gulp.task('script', function(){
   .pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('js', function(){
-  return gulp.src([
-    'node_modules/slick-carousel/slick/slick.js'
-  ])
-    .pipe(concat('libs.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('app/js'))
-    .pipe(browserSync.reload({stream: true}))
-});
+// gulp.task('js', function(){
+//   return gulp.src([
+//     // 'node_modules/slick-carousel-go-to-thumb/slick/slick.js'
+//     // 'slick.min.js'
+//   ])
+//     .pipe(concat('libs.min.js'))
+//     .pipe(uglify())
+//     .pipe(gulp.dest('app/js'))
+//     .pipe(browserSync.reload({stream: true}))
+// });
 
 gulp.task('browser-sync', function() {
   browserSync.init({
@@ -95,4 +96,4 @@ gulp.task('watch', function(){
 
 gulp.task('build', gulp.series('clean', 'export'))
 
-gulp.task('default', gulp.parallel('css', 'scss', 'babel', 'js', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('css', 'scss', 'babel', 'browser-sync', 'watch'));

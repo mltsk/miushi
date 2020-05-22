@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Miushi</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,600&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+</head>
+<body class="page">
+    <header class="header">
+        <button class="header__toggle" aria-label="развернуть меню"></button>
+        <a class="header__logo">
+            <picture>
+            <source media="(min-width: 750px)" srcset="img/logo-tablet.png 1x, img/logo-tablet@2x.png 2x, img/logo-tablet@3x.png 3x">
+            <img class="header__logo-image" src="img/logo-mobile.png"
+                srcset="img/logo-mobile@2x.png 2x, img/logo-mobile@3x.png 3x" alt="Логотип">
+            </picture>
+        </a>
+        <div class="header__box">
+            <ul class="header__contacts contacts towrap">
+                <li class="contacts__item contacts__item--address"><a class="contacts__link" href="https:/map.ru">г. Курск, ул. Ленина, д. 3</a></li>
+                <li class="contacts__item contacts__item--email"><a class="contacts__link" href="mailto:78003332222@yandex.ru">78003332222@yandex.ru</a></li>
+            </ul>
+            <div class="header__phone phone towrap">
+                <div class="phone__wrapper">
+                    <a class="phone__number" href="tel:+78003332222" href="">+7 (800) 333 2 222</a>
+                    <span class="phone__working-time">Работаем с 11.00 до 23.00</span>
+                </div>
+                <button class="header__call-back btn">Обратный звонок</button>
+            </div>
+            <nav class="header__nav nav towrap">
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--menu">
+                        <a href="#" class="nav__link nav__link--menu menu">Меню
+                            <svg class="nav__link-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                <path fill="#444444" d="M13 4v2l-5 5-5-5v-2l5 5z"></path>
+                            </svg>
+                        </a>
+                        <ul class="menu__list">
+                            <li class="menu__item"><a class="menu__link" href="#">Суши</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Гунканы</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Инари</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Супы</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Салаты</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Горячие закуски</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Десерты</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Напитки</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Дополительно</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Акции и скидки</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Доставка и оплата</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Новости</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header__box-close towrap" aria-label="Закрыть меню"></button>
+        </div>
+        <div class="header__box-shadow"></div>
+        <div class="header__account account">
+            <a class="account__item account__item--first account__profile" href="#">
+                <svg class="account__svg"  fill="#1fba0a" xmlns="http://www.w3.org/2000/svg" width="22" height="22" enable-background="new 0 0 32 32" viewBox="0 0 32 32">
+                    <path  d="M14.5 22c4.137 0 7.5-4.094 7.5-9.125 0-5.032-3.363-9.125-7.5-9.125-2.046 0-3.956.979-5.378 2.755C7.753 8.217 6.999 10.479 7 12.875 7 17.907 10.364 22 14.5 22zm0-16.25c3.032 0 5.5 3.196 5.5 7.125C20 16.805 17.532 20 14.5 20S9 16.805 8.998 12.875c0-3.929 2.468-7.125 5.502-7.125zM20.799 21c-.553 0-1 .447-1 1s.447 1 1 1C24.218 23 27 25.782 27 29.202c0 .439-.359.798-.801.798h-23.4c-.44 0-.799-.357-.799-.798C2 25.782 4.781 23 8.199 23c.553 0 1-.447 1-1s-.447-1-1-1C3.678 21 0 24.68 0 29.202 0 30.745 1.256 32 2.799 32h23.4C27.743 32 29 30.745 29 29.202 29 24.68 25.32 21 20.799 21zM15.231 2.639c.716-.424 1.479-.638 2.269-.638 3.032 0 5.5 3.196 5.5 7.124 0 .705-.078 1.396-.232 2.057-.127.538.207 1.076.744 1.202.077.019.153.026.229.026.454 0 .864-.311.973-.771.188-.811.286-1.656.286-2.514C25 4.094 21.637 0 17.5 0c-1.137 0-2.272.317-3.286.917-.476.281-.633.895-.352 1.37.281.475.896.633 1.369.352zM24 17c-.553 0-1 .447-1 1s.447 1 1 1c3.419 0 6 2.85 6 6.268 0 .113-.021.226-.068.326-.224.506.004 1.096.508 1.32.13.059.269.086.406.086.383 0 .748-.223.914-.594.159-.359.24-.742.24-1.141C32 20.747 28.521 17 24 17z"/>
+                </svg>
+                <span class="account__span">Кабинет</span> 
+            </a>
+            <a class="account__item account__card" href="#">
+                <svg class="account__svg" fill="#1fba0a" width="22" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459.529 459.529">
+                    <path d="M17 55.231h48.733l69.417 251.033c1.983 7.367 8.783 12.467 16.433 12.467h213.35c6.8 0 12.75-3.967 15.583-10.2l77.633-178.5c2.267-5.383 1.7-11.333-1.417-16.15-3.117-4.817-8.5-7.65-14.167-7.65H206.833c-9.35 0-17 7.65-17 17s7.65 17 17 17H416.5l-62.9 144.5H164.333L94.917 33.698c-1.983-7.367-8.783-12.467-16.433-12.467H17c-9.35 0-17 7.65-17 17s7.65 17 17 17zM135.433 438.298c21.25 0 38.533-17.283 38.533-38.533s-17.283-38.533-38.533-38.533S96.9 378.514 96.9 399.764s17.283 38.534 38.533 38.534zM376.267 438.298h2.833c10.2-.85 19.55-5.383 26.35-13.317 6.8-7.65 9.917-17.567 9.35-28.05-1.417-20.967-19.833-37.117-41.083-35.7-21.25 1.417-37.117 20.117-35.7 41.083 1.416 20.117 18.133 35.984 38.25 35.984z"/>
+                </svg>
+                <span class="account__span">Корзина</span> 
+            </a>
+        </div>
+    </header>
+    <section class="slider">
+        <h2 class="visually-hidden">Слайдер</h2>
+        <ul class="slider__list">
+            <li class="slider__item">
+                <picture>
+                    <source media="(min-width: 1160px)" srcset="img-content/slider-desktop.jpg 1x, img-content/slider-desktop@2x.jpg 2x, img-content/slider-desktop@3x.jpg 3x">
+                    <source media="(min-width: 550px)" srcset="img-content/slider-tablet.jpg 1x, img-content/slider-tablet@2x.jpg 2x, img-content/slider-tablet@3x.jpg 3x">
+                    <img class="poly-ie" class="slider__img" src="img-content/slider-mobile.jpg" srcset="img-content/slider-mobile@2x.jpg 2x, img-content/slider-mobile@3x.jpg 3x" alt="Счастливые часы с 11 до 16 в будние дни">
+                </picture>
+                <button class="slider__btn btn">Подробнее</button>
+            </li>
+            <li class="slider__item">
+                <picture>
+                    <source media="(min-width: 1160px)" srcset="img-content/slider-desktop.jpg 1x, img-content/slider-desktop@2x.jpg 2x, img-content/slider-desktop@3x.jpg 3x">
+                    <source media="(min-width: 550px)" srcset="img-content/slider-tablet.jpg 1x, img-content/slider-tablet@2x.jpg 2x, img-content/slider-tablet@3x.jpg 3x">
+                    <img class="poly-ie" class="slider__img" src="img-content/slider-mobile.jpg" srcset="img-content/slider-mobile@2x.jpg 2x, img-content/slider-mobile@3x.jpg 3x" alt="Счастливые часы с 11 до 16 в будние дни">
+                </picture>
+                <button class="slider__btn btn">Подробнее</button>
+            </li>
+            <li class="slider__item">
+                <picture>
+                    <source media="(min-width: 1160px)" srcset="img-content/slider-desktop.jpg 1x, img-content/slider-desktop@2x.jpg 2x, img-content/slider-desktop@3x.jpg 3x">
+                    <source media="(min-width: 550px)" srcset="img-content/slider-tablet.jpg 1x, img-content/slider-tablet@2x.jpg 2x, img-content/slider-tablet@3x.jpg 3x">
+                    <img class="poly-ie" class="slider__img" src="img-content/slider-mobile.jpg" srcset="img-content/slider-mobile@2x.jpg 2x, img-content/slider-mobile@3x.jpg 3x" alt="Счастливые часы с 11 до 16 в будние дни">
+                </picture>
+                <button class="slider__btn btn">Подробнее</button>
+            </li>
+        </ul>
+    </section>
+
+    <section class="food-section food-section--sets">
+        <h2 class="food-section__title title">Сеты</h2>
+        <ul class="food-section__list">
+            <li class="food-section__wrapper">
+                <div class="food-section__item hit">
+                    <img class="food-section__img" src="img-content/set-1.jpg" srcset="img-content/set-1@2x.jpg 2x, img-content/set-1@3x.jpg 3x">
+                    <h3 class="food-section__name">Сет №1</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="1550">1 550</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <img class="food-section__img" src="img-content/set-2.jpg" srcset="img-content/set-2@2x.jpg 2x, img-content/set-2@3x.jpg 3x">
+                    <h3 class="food-section__name">Сет №2</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="1250">1 250</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item fire">
+                    <img class="food-section__img" src="img-content/set-3.jpg" srcset="img-content/set-3@2x.jpg 2x, img-content/set-3@3x.jpg 3x">
+                    <h3 class="food-section__name">Сет №3</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="550">550</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item hit">
+                    <img class="food-section__img" src="img-content/set-4.jpg" srcset="img-content/set-4@2x.jpg 2x, img-content/set-4@3x.jpg 3x">
+                    <h3 class="food-section__name">Сет №4</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="670">670</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <img class="food-section__img" src="img-content/set-1.jpg" srcset="img-content/set-1@2x.jpg 2x, img-content/set-1@3x.jpg 3x">
+                    <h3 class="food-section__name">Сет №5</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="1050">1 050</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <img class="food-section__img" src="img-content/set-2.jpg" srcset="img-content/set-2@2x.jpg 2x, img-content/set-2@3x.jpg 3x">
+                    <h3 class="food-section__name">Сет №6</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="550">550</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item fire">
+                    <img class="food-section__img" src="img-content/set-3.jpg" srcset="img-content/set-3@2x.jpg 2x, img-content/set-3@3x.jpg 3x">
+                    <h3 class="food-section__name">Сет №7</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="950">950</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item veg">
+                    <img class="food-section__img" src="img-content/set-4.jpg" srcset="img-content/set-4@2x.jpg 2x, img-content/set-4@3x.jpg 3x">
+                    <h3 class="food-section__name">Сет №8</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="1350">1 350</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="food-section food-section--rolls">
+        <h2 class="food-section__title title">Роллы</h2>
+        <ul class="food-section__list">
+            <li class="food-section__wrapper">
+                <div class="food-section__item fire">
+                    <div class="food-section__wrapper-img">
+                        <img class="food-section__img" src="img-content/roll-1.jpg" srcset="img-content/roll-1@2x.jpg 2x, img-content/roll-1@3x.jpg 3x">
+                    </div>
+                    <h3 class="food-section__name">Кунсей батакон</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="155">155</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item hit">
+                    <div class="food-section__wrapper-img">
+                        <img class="food-section__img" src="img-content/roll-2.jpg" srcset="img-content/roll-2@2x.jpg 2x, img-content/roll-2@3x.jpg 3x">
+                    </div>
+                        <h3 class="food-section__name">Унаги диру</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="250">250</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <div class="food-section__wrapper-img">
+                        <img class="food-section__img" src="img-content/roll-3.jpg" srcset="img-content/roll-3@2x.jpg 2x, img-content/roll-3@3x.jpg 3x">
+                    </div>
+                    <h3 class="food-section__name">Филадельфия</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="150">150</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <div class="food-section__wrapper-img">
+                        <img class="food-section__img" src="img-content/roll-4.jpg" srcset="img-content/roll-4@2x.jpg 2x, img-content/roll-4@3x.jpg 3x">
+                    </div>
+                    <h3 class="food-section__name">Мексиканский</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="370">370</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <div class="food-section__wrapper-img">
+                        <img class="food-section__img" src="img-content/roll-1.jpg" srcset="img-content/roll-1@2x.jpg 2x, img-content/roll-1@3x.jpg 3x">
+                    </div>
+                    <h3 class="food-section__name">Кунсей батакон</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="150">150</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <div class="food-section__wrapper-img">
+                        <img class="food-section__img" src="img-content/roll-2.jpg" srcset="img-content/roll-2@2x.jpg 2x, img-content/roll-2@3x.jpg 3x">
+                    </div>
+                    <h3 class="food-section__name">Унаги диру</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="550">550</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <div class="food-section__wrapper-img">
+                        <img class="food-section__img" src="img-content/roll-3.jpg" srcset="img-content/roll-3@2x.jpg 2x, img-content/roll-3@3x.jpg 3x">
+                    </div>
+                    <h3 class="food-section__name">Филадельфия</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="250">250</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <div class="food-section__wrapper-img">
+                        <img class="food-section__img" src="img-content/roll-4.jpg" srcset="img-content/roll-4@2x.jpg 2x, img-content/roll-4@3x.jpg 3x">
+                    </div>
+                    <h3 class="food-section__name">Мексиканский</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="350">350</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="food-section food-section--pizza">
+        <h2 class="food-section__title title">Пицца</h2>
+        <ul class="food-section__list">
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <img class="food-section__img" src="img-content/pizza-1.jpg" srcset="img-content/pizza-1@2x.jpg 2x, img-content/pizza-1@3x.jpg 3x">
+                    <h3 class="food-section__name">Баварская</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="155">155</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <img class="food-section__img" src="img-content/pizza-2.jpg" srcset="img-content/pizza-2@2x.jpg 2x, img-content/pizza-2@3x.jpg 3x">
+                    <h3 class="food-section__name">Вегетарианская</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="250">250</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <img class="food-section__img" src="img-content/pizza-3.jpg" srcset="img-content/pizza-3@2x.jpg 2x, img-content/pizza-3@3x.jpg 3x">
+                    <h3 class="food-section__name">Пепперони</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="150">150</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <img class="food-section__img" src="img-content/pizza-4.jpg" srcset="img-content/pizza-4@2x.jpg 2x, img-content/pizza-4@3x.jpg 3x">
+                    <h3 class="food-section__name">Классическая</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="370">370</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <img class="food-section__img" src="img-content/pizza-1.jpg" srcset="img-content/pizza-1@2x.jpg 2x, img-content/pizza-1@3x.jpg 3x">
+                    <h3 class="food-section__name">Баварская</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="150">150</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <img class="food-section__img" src="img-content/pizza-2.jpg" srcset="img-content/pizza-2@2x.jpg 2x, img-content/pizza-2@3x.jpg 3x">
+                    <h3 class="food-section__name">Вегетарианская</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="550">550</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <img class="food-section__img" src="img-content/pizza-3.jpg" srcset="img-content/pizza-3@2x.jpg 2x, img-content/pizza-3@3x.jpg 3x">
+                    <h3 class="food-section__name">Пепперони</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="250">250</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <img class="food-section__img" src="img-content/pizza-4.jpg" srcset="img-content/pizza-4@2x.jpg 2x, img-content/pizza-4@3x.jpg 3x">
+                    <h3 class="food-section__name">Классическая</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="350">350</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="food-section food-section--wok">
+        <h2 class="food-section__title title">WOK</h2>
+        <ul class="food-section__list">
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <div class="food-section__wrapper-img">
+                        <img class="food-section__img" src="img-content/wok-1.jpg" srcset="img-content/wok-1@2x.jpg 2x, img-content/wok-1@3x.jpg 3x">
+                    </div>
+                    <h3 class="food-section__name">Кунсей батакон</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <div class="food-section__add">
+                        <div class="food-section__wrapper-add">
+                            <span class="food-section__add-left">
+                                <span class="food-section__add-left-name">Добавить:</span>
+                                <span class="food-section__add-left-wrapper">
+                                    +<span class="food-section__add-left-quantity">0</span>
+                                    <button class="food-section__add-left-btn"></button>
+                                </span>
+                            </span>
+                            <span class="food-section__add-right">
+                                <span class="food-section__add-right-price">0</span><sup>&nbsp;руб.</sup>
+                                <button class="food-section__add-right-plus"></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="food-section__supplements">
+                        <div class="food-section__wrapper-select">
+                            <select class="food-section__supplements-select">
+                                <option value="Китайский соус" data-price="70">Китайский соус</option>
+                                <option value="Соевый соус" data-price="60">Соевый соус</option>
+                                <option value="Морской соус" data-price="50">Морской соус</option>
+                                <option value="Сливочный соус" data-price="80">Сливочный соус</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="155">155</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <div class="food-section__wrapper-img">
+                        <img class="food-section__img" src="img-content/wok-2.jpg" srcset="img-content/wok-2@2x.jpg 2x, img-content/wok-2@3x.jpg 3x">
+                    </div>
+                    <h3 class="food-section__name">Кунсей батакон</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <div class="food-section__add">
+                        <div class="food-section__wrapper-add">
+                            <span class="food-section__add-left">
+                                <span class="food-section__add-left-name">Добавить:</span>
+                                <span class="food-section__add-left-wrapper">
+                                    +<span class="food-section__add-left-quantity">0</span>
+                                    <button class="food-section__add-left-btn"></button>
+                                </span>
+                            </span>
+                            <span class="food-section__add-right">
+                                <span class="food-section__add-right-price">0</span><sup>&nbsp;руб.</sup>
+                                <button class="food-section__add-right-plus"></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="food-section__supplements">
+                        <div class="food-section__wrapper-select">
+                            <select class="food-section__supplements-select">
+                                <option value="Китайский соус" data-price="70">Китайский соус</option>
+                                <option value="Соевый соус" data-price="60">Соевый соус</option>
+                                <option value="Морской соус" data-price="50">Морской соус</option>
+                                <option value="Сливочный соус" data-price="80">Сливочный соус</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="155">155</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <div class="food-section__wrapper-img">
+                        <img class="food-section__img" src="img-content/wok-3.jpg" srcset="img-content/wok-3@2x.jpg 2x, img-content/wok-3@3x.jpg 3x">
+                    </div>
+                    <h3 class="food-section__name">Кунсей батакон</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <div class="food-section__add">
+                        <div class="food-section__wrapper-add">
+                            <span class="food-section__add-left">
+                                <span class="food-section__add-left-name">Добавить:</span>
+                                <span class="food-section__add-left-wrapper">
+                                    +<span class="food-section__add-left-quantity">0</span>
+                                    <button class="food-section__add-left-btn"></button>
+                                </span>
+                            </span>
+                            <span class="food-section__add-right">
+                                <span class="food-section__add-right-price">0</span><sup>&nbsp;руб.</sup>
+                                <button class="food-section__add-right-plus"></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="food-section__supplements">
+                        <div class="food-section__wrapper-select">
+                            <select class="food-section__supplements-select">
+                                <option value="Китайский соус" data-price="70">Китайский соус</option>
+                                <option value="Соевый соус" data-price="60">Соевый соус</option>
+                                <option value="Морской соус" data-price="50">Морской соус</option>
+                                <option value="Сливочный соус" data-price="80">Сливочный соус</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="155">155</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <div class="food-section__wrapper-img">
+                        <img class="food-section__img" src="img-content/wok-4.jpg" srcset="img-content/wok-4@2x.jpg 2x, img-content/wok-4@3x.jpg 3x">
+                    </div>
+                    <h3 class="food-section__name">Кунсей батакон</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <div class="food-section__add">
+                        <div class="food-section__wrapper-add">
+                            <span class="food-section__add-left">
+                                <span class="food-section__add-left-name">Добавить:</span>
+                                <span class="food-section__add-left-wrapper">
+                                    +<span class="food-section__add-left-quantity">0</span>
+                                    <button class="food-section__add-left-btn"></button>
+                                </span>
+                            </span>
+                            <span class="food-section__add-right">
+                                <span class="food-section__add-right-price">0</span><sup>&nbsp;руб.</sup>
+                                <button class="food-section__add-right-plus"></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="food-section__supplements">
+                        <div class="food-section__wrapper-select">
+                            <select class="food-section__supplements-select">
+                                <option value="Китайский соус" data-price="70">Китайский соус</option>
+                                <option value="Соевый соус" data-price="60">Соевый соус</option>
+                                <option value="Морской соус" data-price="50">Морской соус</option>
+                                <option value="Сливочный соус" data-price="80">Сливочный соус</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="155">155</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <div class="food-section__wrapper-img">
+                        <img class="food-section__img" src="img-content/wok-1.jpg" srcset="img-content/wok-1@2x.jpg 2x, img-content/wok-1@3x.jpg 3x">
+                    </div>
+                    <h3 class="food-section__name">Кунсей батакон</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <div class="food-section__add">
+                        <div class="food-section__wrapper-add">
+                            <span class="food-section__add-left">
+                                <span class="food-section__add-left-name">Добавить:</span>
+                                <span class="food-section__add-left-wrapper">
+                                    +<span class="food-section__add-left-quantity">0</span>
+                                    <button class="food-section__add-left-btn"></button>
+                                </span>
+                            </span>
+                            <span class="food-section__add-right">
+                                <span class="food-section__add-right-price">0</span><sup>&nbsp;руб.</sup>
+                                <button class="food-section__add-right-plus"></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="food-section__supplements">
+                        <div class="food-section__wrapper-select">
+                            <select class="food-section__supplements-select">
+                                <option value="Китайский соус" data-price="70">Китайский соус</option>
+                                <option value="Соевый соус" data-price="60">Соевый соус</option>
+                                <option value="Морской соус" data-price="50">Морской соус</option>
+                                <option value="Сливочный соус" data-price="80">Сливочный соус</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="155">155</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <div class="food-section__wrapper-img">
+                        <img class="food-section__img" src="img-content/wok-2.jpg" srcset="img-content/wok-2@2x.jpg 2x, img-content/wok-2@3x.jpg 3x">
+                    </div>
+                    <h3 class="food-section__name">Кунсей батакон</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <div class="food-section__add">
+                        <div class="food-section__wrapper-add">
+                            <span class="food-section__add-left">
+                                <span class="food-section__add-left-name">Добавить:</span>
+                                <span class="food-section__add-left-wrapper">
+                                    +<span class="food-section__add-left-quantity">0</span>
+                                    <button class="food-section__add-left-btn"></button>
+                                </span>
+                            </span>
+                            <span class="food-section__add-right">
+                                <span class="food-section__add-right-price">0</span><sup>&nbsp;руб.</sup>
+                                <button class="food-section__add-right-plus"></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="food-section__supplements">
+                        <div class="food-section__wrapper-select">
+                            <select class="food-section__supplements-select">
+                                <option value="Китайский соус" data-price="70">Китайский соус</option>
+                                <option value="Соевый соус" data-price="60">Соевый соус</option>
+                                <option value="Морской соус" data-price="50">Морской соус</option>
+                                <option value="Сливочный соус" data-price="80">Сливочный соус</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="155">155</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <div class="food-section__wrapper-img">
+                        <img class="food-section__img" src="img-content/wok-3.jpg" srcset="img-content/wok-3@2x.jpg 2x, img-content/wok-3@3x.jpg 3x">
+                    </div>
+                    <h3 class="food-section__name">Кунсей батакон</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <div class="food-section__add">
+                        <div class="food-section__wrapper-add">
+                            <span class="food-section__add-left">
+                                <span class="food-section__add-left-name">Добавить:</span>
+                                <span class="food-section__add-left-wrapper">
+                                    +<span class="food-section__add-left-quantity">0</span>
+                                    <button class="food-section__add-left-btn"></button>
+                                </span>
+                            </span>
+                            <span class="food-section__add-right">
+                                <span class="food-section__add-right-price">0</span><sup>&nbsp;руб.</sup>
+                                <button class="food-section__add-right-plus"></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="food-section__supplements">
+                        <div class="food-section__wrapper-select">
+                            <select class="food-section__supplements-select">
+                                <option value="Китайский соус" data-price="70">Китайский соус</option>
+                                <option value="Соевый соус" data-price="60">Соевый соус</option>
+                                <option value="Морской соус" data-price="50">Морской соус</option>
+                                <option value="Сливочный соус" data-price="80">Сливочный соус</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="155">155</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+            <li class="food-section__wrapper">
+                <div class="food-section__item">
+                    <div class="food-section__wrapper-img">
+                        <img class="food-section__img" src="img-content/wok-4.jpg" srcset="img-content/wok-4@2x.jpg 2x, img-content/wok-4@3x.jpg 3x">
+                    </div>
+                    <h3 class="food-section__name">Кунсей батакон</h3>
+                    <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                    <div class="food-section__add">
+                        <div class="food-section__wrapper-add">
+                            <span class="food-section__add-left">
+                                <span class="food-section__add-left-name">Добавить:</span>
+                                <span class="food-section__add-left-wrapper">
+                                    +<span class="food-section__add-left-quantity">0</span>
+                                    <button class="food-section__add-left-btn"></button>
+                                </span>
+                            </span>
+                            <span class="food-section__add-right">
+                                <span class="food-section__add-right-price">0</span><sup>&nbsp;руб.</sup>
+                                <button class="food-section__add-right-plus"></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="food-section__supplements">
+                        <div class="food-section__wrapper-select">
+                            <select class="food-section__supplements-select">
+                                <option value="Китайский соус" data-price="70">Китайский соус</option>
+                                <option value="Соевый соус" data-price="60">Соевый соус</option>
+                                <option value="Морской соус" data-price="50">Морской соус</option>
+                                <option value="Сливочный соус" data-price="80">Сливочный соус</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="food-section__footer">
+                        <span class="food-section__price"><span class="price" data-price="155">155</span><sup>руб.</sup></span>
+                        <span class="food-section__price-btns">
+                            <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                            <input class="food-section__input" type="number" min="1" max="9" value="1">
+                            <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                        </span>
+                    </p>
+                    <button class="food-section__btn btn">В корзину</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <div class="offers__wrapper">
+        <div class="offers__container">
+            <ul class="offers__list">
+                <li class="offers__item offers__item--current js-filter-new">Новинки</li>
+                <li class="offers__item js-filter-promotion">Акции</li>
+            </ul>
+            <section class="food-section food-section--new">
+                <ul class="food-section__list food-section__list--new">
+                    <li class="food-section__wrapper">
+                        <div class="food-section__item fire">
+                            <div class="food-section__wrapper-img">
+                                <img class="food-section__img" src="img-content/roll-1.jpg" srcset="img-content/roll-1@2x.jpg 2x, img-content/roll-1@3x.jpg 3x">
+                            </div>
+                            <h3 class="food-section__name">Кунсей батакон</h3>
+                            <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                            <p class="food-section__footer">
+                                <span class="food-section__price"><span class="price" data-price="155">155</span><sup>руб.</sup></span>
+                                <span class="food-section__price-btns">
+                                    <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                                    <input class="food-section__input" type="number" min="1" max="9" value="1">
+                                    <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                                </span>
+                            </p>
+                            <button class="food-section__btn btn">В корзину</button>
+                        </div>
+                    </li>
+                    <li class="food-section__wrapper">
+                        <div class="food-section__item new">
+                            <div class="food-section__wrapper-img">
+                                <img class="food-section__img" src="img-content/roll-2.jpg" srcset="img-content/roll-2@2x.jpg 2x, img-content/roll-2@3x.jpg 3x">
+                            </div>
+                                <h3 class="food-section__name">Унаги диру</h3>
+                            <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                            <p class="food-section__footer">
+                                <span class="food-section__price"><span class="price" data-price="250">250</span><sup>руб.</sup></span>
+                                <span class="food-section__price-btns">
+                                    <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                                    <input class="food-section__input" type="number" min="1" max="9" value="1">
+                                    <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                                </span>
+                            </p>
+                            <button class="food-section__btn btn">В корзину</button>
+                        </div>
+                    </li>
+                    <li class="food-section__wrapper">
+                        <div class="food-section__item fire">
+                            <div class="food-section__wrapper-img">
+                                <img class="food-section__img" src="img-content/roll-3.jpg" srcset="img-content/roll-3@2x.jpg 2x, img-content/roll-3@3x.jpg 3x">
+                            </div>
+                            <h3 class="food-section__name">Филадельфия</h3>
+                            <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                            <p class="food-section__footer">
+                                <span class="food-section__price"><span class="price" data-price="150">150</span><sup>руб.</sup></span>
+                                <span class="food-section__price-btns">
+                                    <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                                    <input class="food-section__input" type="number" min="1" max="9" value="1">
+                                    <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                                </span>
+                            </p>
+                            <button class="food-section__btn btn">В корзину</button>
+                        </div>
+                    </li>
+                    <li class="food-section__wrapper">
+                        <div class="food-section__item new">
+                            <div class="food-section__wrapper-img">
+                                <img class="food-section__img" src="img-content/roll-4.jpg" srcset="img-content/roll-4@2x.jpg 2x, img-content/roll-4@3x.jpg 3x">
+                            </div>
+                            <h3 class="food-section__name">Мексиканский</h3>
+                            <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                            <p class="food-section__footer">
+                                <span class="food-section__price"><span class="price" data-price="370">370</span><sup>руб.</sup></span>
+                                <span class="food-section__price-btns">
+                                    <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                                    <input class="food-section__input" type="number" min="1" max="9" value="1">
+                                    <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                                </span>
+                            </p>
+                            <button class="food-section__btn btn">В корзину</button>
+                        </div>
+                    </li>
+                    <li class="food-section__wrapper">
+                        <div class="food-section__item fire">
+                            <div class="food-section__wrapper-img">
+                                <img class="food-section__img" src="img-content/roll-1.jpg" srcset="img-content/roll-1@2x.jpg 2x, img-content/roll-1@3x.jpg 3x">
+                            </div>
+                            <h3 class="food-section__name">Кунсей батакон</h3>
+                            <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                            <p class="food-section__footer">
+                                <span class="food-section__price"><span class="price" data-price="150">150</span><sup>руб.</sup></span>
+                                <span class="food-section__price-btns">
+                                    <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                                    <input class="food-section__input" type="number" min="1" max="9" value="1">
+                                    <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                                </span>
+                            </p>
+                            <button class="food-section__btn btn">В корзину</button>
+                        </div>
+                    </li>
+                    <li class="food-section__wrapper">
+                        <div class="food-section__item new">
+                            <div class="food-section__wrapper-img">
+                                <img class="food-section__img" src="img-content/roll-2.jpg" srcset="img-content/roll-2@2x.jpg 2x, img-content/roll-2@3x.jpg 3x">
+                            </div>
+                            <h3 class="food-section__name">Унаги диру</h3>
+                            <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                            <p class="food-section__footer">
+                                <span class="food-section__price"><span class="price" data-price="550">550</span><sup>руб.</sup></span>
+                                <span class="food-section__price-btns">
+                                    <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                                    <input class="food-section__input" type="number" min="1" max="9" value="1">
+                                    <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                                </span>
+                            </p>
+                            <button class="food-section__btn btn">В корзину</button>
+                        </div>
+                    </li>
+                    <li class="food-section__wrapper">
+                        <div class="food-section__item fire">
+                            <div class="food-section__wrapper-img">
+                                <img class="food-section__img" src="img-content/roll-3.jpg" srcset="img-content/roll-3@2x.jpg 2x, img-content/roll-3@3x.jpg 3x">
+                            </div>
+                            <h3 class="food-section__name">Филадельфия</h3>
+                            <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                            <p class="food-section__footer">
+                                <span class="food-section__price"><span class="price" data-price="250">250</span><sup>руб.</sup></span>
+                                <span class="food-section__price-btns">
+                                    <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                                    <input class="food-section__input" type="number" min="1" max="9" value="1">
+                                    <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                                </span>
+                            </p>
+                            <button class="food-section__btn btn">В корзину</button>
+                        </div>
+                    </li>
+                    <li class="food-section__wrapper">
+                        <div class="food-section__item new">
+                            <div class="food-section__wrapper-img">
+                                <img class="food-section__img" src="img-content/roll-4.jpg" srcset="img-content/roll-4@2x.jpg 2x, img-content/roll-4@3x.jpg 3x">
+                            </div>
+                            <h3 class="food-section__name">Мексиканский</h3>
+                            <p class="food-section__info">24 шт. | 960 г. | 800 Kkal</p>
+                            <p class="food-section__footer">
+                                <span class="food-section__price"><span class="price" data-price="350">350</span><sup>руб.</sup></span>
+                                <span class="food-section__price-btns">
+                                    <button class="food-section__price-btn food-section__price-btn--minus"></button>
+                                    <input class="food-section__input" type="number" min="1" max="9" value="1">
+                                    <button class="food-section__price-btn food-section__price-btn--plus"></button>
+                                </span>
+                            </p>
+                            <button class="food-section__btn btn">В корзину</button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <section class="reasons">
+        <h2 class="reasons__title title">10 причин купить у нас</h2>
+        <ul class="reasons__list">
+            <li class="reasons__item reasons__item--kitchen">100% ручная работа</li>
+            <li class="reasons__item reasons__item--rice">Мы используем только дорогой рис из Японии</li>
+            <li class="reasons__item reasons__item--pizza">Вся пицца готовится из итальянской муки и Итальянского соуса</li>
+            <li class="reasons__item reasons__item--dish">100% свежие ингредиенты</li>
+            <li class="reasons__item reasons__item--octopus">Больше начинки, меньше риса!</li>
+            <li class="reasons__item reasons__item--like">Постоянный контроль качества на всех этапах</li>
+            <li class="reasons__item reasons__item--leaf">Мы не используем майонез!</li>
+            <li class="reasons__item reasons__item--money">Самые низкие цены на рынке! (Нет ресторанной наценки)</li>
+            <li class="reasons__item reasons__item--knife">Мы не заменяем авокадо огурцом!</li>
+            <li class="reasons__item reasons__item--fish">Только охлажденная рыба (никакой заморозки)</li>
+        </ul>
+        <button class="reasons__btn btn">Показать все</button>
+    </section>
+
+    <section class="reviews">
+        <h2 class="reviews__title title">Отзывы</h2>
+        <ul class="reviews__list">
+            <li class="reviews__item">
+                <picture>
+                    <img class="reviews__img" width="273" height="441" src="img-content/reviews.jpg" srcset="img-content/reviews@2x.jpg 2x, img-content/reviews@3x.jpg 3x" alt="Отзыв Надежды">
+                </picture>
+            </li>
+            <li class="reviews__item">
+                <picture>
+                    <img class="reviews__img" width="273" height="441" src="img-content/reviews.jpg" srcset="img-content/reviews@2x.jpg 2x, img-content/reviews@3x.jpg 3x" alt="Отзыв Надежды">
+                </picture>
+            </li>
+            <li class="reviews__item reviews__item--third">
+                <picture>
+                    <img class="reviews__img" width="273" height="441" src="img-content/reviews.jpg" srcset="img-content/reviews@2x.jpg 2x, img-content/reviews@3x.jpg 3x" alt="Отзыв Надежды">
+                </picture>
+            </li>
+        </ul>
+    </section>
+
+    <section class="feedback">
+        <div class="feedback__wrapper">
+            <div class="feedback__box-wrapper">
+                <div class="feedback__box">
+                    <span class="feedback__question">Есть вопросы?</span>
+                    <h2 class="feedback__title">Оставьте свои&nbsp;контакты</h2>
+                    <form class="feedback__form" action="">
+                        <input class="feedback__input feedback__name" type="text" name="name" placeholder="Имя">
+                        <input class="feedback__input feedback__phone" type="tel" name="phone" placeholder="Телефон">
+                        <button class="feedback__btn btn" type="submit">Отправить</button>
+                    </form>
+                    <p class="feedback__agreement">
+                        Нажимая на кнопку «Отправить», вы даете согласие на обработку своих персональных данных.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2 class="about__title title">О компании</h2>
+        <h3 class="about__subtitle">Заказ и доставка роллов, пиццы и WOK(Вок) в городе Курск</h3>
+        <div class="about__information">
+            <picture>
+                <img class="about__img" width="277" height="478" src="img/about.jpg" srcset="img/about@2x.jpg 2x, img/about@3x.jpg 3x" alt="Пример сервировки блюда">
+            </picture>
+            <p class="about__text">
+                Суши МИЮШИ открылись в октябре 2012г. и уже завоевали успех у тех, кто ценит японскую кухню и качественное приготовление блюд.
+            </p>
+            <p class="about__text">
+                С 2013 года мы осуществляем не только доставку на дом, теперь для вас открыт наш уютный небольшой зал. Придя сюда, вы сможете плотно пообедать, насладиться прекрасными напитками, посидеть с друзьями или обзавестись новыми знакомствами.
+            </p>
+            <p class="about__text">
+                Открывая зал, Мы преследовали цель предоставить своим посетителям максимум удобства и комфорта, поэтому, придя сюда в первый раз, вы почувствуете себя как рыба в воде, окунувшись в домашнюю и теплую обстановку!
+            </p>
+            <p class="about__text">
+                Особое внимание мы уделяем организации доставки суши и других блюд, которая осуществляется только по г. Курске. Четкая и слаженная работа курьеров позволяет максимально сократить время от приготовления блюда до его попадания на стол заказчику. Как правило, оно составляет от 20 до 60 минут в зависимости от местонахождения клиента. Операторы службы доставки всегда осведомлены обо всех изменениях времени доставки и предупреждают клиентов заранее, а при возможных серьезных задержках в связи с дорожной ситуацией предложат Вам альтернативу. Мы беремся только за ту работу, которую можем выполнить в срок.
+            </p>
+            <p class="about__text">
+                В меню суши МИЮШИ представлено все многообразие японской кухни. Классические суши, и роллы приготовлены в соответствии с традиционными рецептами. Для любителей нежных и тающих во рту блюд предлагаются роллы с мясом краба, а также для больших любителей копченого угря потрясающий ролл Дракон. Для желающих пробовать что-то новое и необычное – острые ГУНКАНЫ и новинка нашего меню - ИНАРИ, широкий выбор горячих роллов. Большим компаниям будет удобно заказать суши и роллы, объединенные в сеты, включающие сразу несколько видов каждого из этих блюд. Кроме того, меню суши МИЮШИ не ограничено только японской кухней, здесь всегда можно заказать горячие и холодные блюда ЛАПША или РИС WOK с различными мясными и рыбными наполнителями, салаты, горячие закуски и различные напитки.
+            </p> 
+        </div>
+        <button class="about__btn btn">Показать всё</button>
+    </section>
+
+    <section class="footer">
+        <div class="footer__container">
+            <div class="footer__upper">
+                <div class="footer__box footer__box--menu">
+                    <h3 class="footer__title footer__title--menu">Меню</h3>
+                    <div class="footer__list-wrapper">
+                        <ul class="footer__list footer__list--menu">
+                            <li class="footer__item"><a class="footer__link" href="#">Суши</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Гунканы</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Инари</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Супы</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Салаты</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Горячие закуски</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Десерты</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Напитки</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Дополительно</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__box footer__box--sets">
+                    <h3 class="footer__title">Сеты</h3>
+                    <div class="footer__list-wrapper">
+                        <ul class="footer__list footer__list--sets-1">
+                            <li class="footer__item"><a class="footer__link" href="#">До 500 руб.</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">До 1000 руб. (для двоих)</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">До 1500 руб (для двоих - троих)</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">До 2000 руб (большая кампания)</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">от 2000 руб (очень большая кампания)</a></li>
+                        </ul>
+                        <ul class="footer__list footer__list--sets-2">
+                            <li class="footer__item"><a class="footer__link" href="#">С угрем</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Горячие</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Запеченные</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Суши</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__box footer__box--rolls">
+                    <h3 class="footer__title">Роллы</h3>
+                    <div class="footer__list-wrapper">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a class="footer__link" href="#">Традиционные/Классические</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Простые</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Теплые</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Запеченые</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Вегитарианские</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__box footer__box--wok">
+                    <h3 class="footer__title">Вок</h3>
+                    <div class="footer__list-wrapper">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a class="footer__link" href="#">Яичная</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Удон</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Гречневая</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Стеклянная</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Рис</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__box footer__box--wok">
+                    <h3 class="footer__title">Пицца</h3>
+                    <div class="footer__list-wrapper">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a class="footer__link" href="#">Мясная</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Рыбная</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Сырная</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Вегитарианская</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="footer__bottom">
+                <span class="footer__copyright">МИЮШИ © 2017</span>
+                <a class="footer__agreement" href="#">Соглашение на обработку персональных данных</a>
+                <ul class="footer__social">
+                    <li class="footer__social-item"><a class="footer__social-link footer__social-link--ig" aria-label="Инстаграмм" href="#"></a></li>
+                    <li class="footer__social-item"><a class="footer__social-link footer__social-link--vk" aria-label="Вконтакте" href="#"></a></li>
+                    <li class="footer__social-item"><a class="footer__social-link footer__social-link--fb" aria-label="Фейсбук" href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js"></script>
+    <script src="js/ofi.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js-fix/main.js"></script>
+    
+</body>
+</html>

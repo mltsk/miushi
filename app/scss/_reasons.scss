@@ -42,159 +42,56 @@
             width: 92px;
             height: 73px;
 
-            background-size: contain;
+            background-size: auto 100%;
             background-position: center;
             background-repeat: no-repeat;
         }
 
         &--kitchen::before {
-            background-image: url('../img/kitchen.png');
-
-            @media (min-resolution: 144dpi),
-            (min-resolution: 1.5dppx){ 
-            background-image: url('../img/kitchen@2x.png');
-        }
-
-            @media (min-resolution: 216dpi),
-            (min-resolution: 2.2dppx) {
-                background-image: url('../img/kitchen@3x.png');
-            }
-
+            background-image: url('../svg/kitchen.svg');
         }
 
         &--rice::before {
-            background-image: url('../img/rice.png');
-
-            @media (min-resolution: 144dpi),
-            (min-resolution: 1.5dppx){ 
-            background-image: url('../img/rice@2x.png');
-        }
-
-            @media (min-resolution: 216dpi),
-            (min-resolution: 2.2dppx) {
-                background-image: url('../img/rice@3x.png');
-            }
-
+            background-image: url('../svg/rice.svg');
         }
 
         &--pizza::before {
-            background-image: url('../img/pizza.png');
-
-            @media (min-resolution: 144dpi),
-            (min-resolution: 1.5dppx){ 
-            background-image: url('../img/pizza@2x.png');
-        }
-
-            @media (min-resolution: 216dpi),
-            (min-resolution: 2.2dppx) {
-                background-image: url('../img/pizza@3x.png');
-            }
-
+            background-image: url('../svg/pizza.svg');
         }
 
         &--dish::before {
-            background-image: url('../img/dish.png');
-
-            @media (min-resolution: 144dpi),
-            (min-resolution: 1.5dppx){ 
-            background-image: url('../img/dish@2x.png');
-        }
-
-            @media (min-resolution: 216dpi),
-            (min-resolution: 2.2dppx) {
-                background-image: url('../img/dish@3x.png');
-            }
-
+            background-image: url('../svg/dish.svg');
         }
 
         &--octopus::before {
-            background-image: url('../img/octopus.png');
-
-            @media (min-resolution: 144dpi),
-            (min-resolution: 1.5dppx){ 
-            background-image: url('../img/octopus@2x.png');
-        }
-
-            @media (min-resolution: 216dpi),
-            (min-resolution: 2.2dppx) {
-                background-image: url('../img/octopus@3x.png');
-            }
-
+            background-image: url('../svg/octopus.svg');
         }
 
         &--like::before {
-            background-image: url('../img/like.png');
-
-            @media (min-resolution: 144dpi),
-            (min-resolution: 1.5dppx){ 
-            background-image: url('../img/like@2x.png');
-        }
-
-            @media (min-resolution: 216dpi),
-            (min-resolution: 2.2dppx) {
-                background-image: url('../img/like@3x.png');
-            }
-
+            background-image: url('../svg/like.svg');
         }
 
         &--leaf::before {
-            background-image: url('../img/leaf.png');
-
-            @media (min-resolution: 144dpi),
-            (min-resolution: 1.5dppx){ 
-            background-image: url('../img/leaf@2x.png');
-        }
-
-            @media (min-resolution: 216dpi),
-            (min-resolution: 2.2dppx) {
-                background-image: url('../img/leaf@3x.png');
-            }
-
+            background-image: url('../svg/leaf.svg');
         }
 
         &--money::before {
-            background-image: url('../img/money.png');
-
-            @media (min-resolution: 144dpi),
-            (min-resolution: 1.5dppx){ 
-            background-image: url('../img/money@2x.png');
-        }
-
-            @media (min-resolution: 216dpi),
-            (min-resolution: 2.2dppx) {
-                background-image: url('../img/money@3x.png');
-            }
-
+            background-image: url('../svg/money.svg');
         }
 
         &--knife::before {
-            background-image: url('../img/knife.png');
+            background-size: 100%;
+            background-position: 0% 10%;
 
-            @media (min-resolution: 144dpi),
-            (min-resolution: 1.5dppx){ 
-            background-image: url('../img/knife@2x.png');
-        }
-
-            @media (min-resolution: 216dpi),
-            (min-resolution: 2.2dppx) {
-                background-image: url('../img/knife@3x.png');
-            }
-
+            background-image: url('../svg/knife.svg');
         }
 
         &--fish::before {
-            background-image: url('../img/fish.png');
-
-            @media (min-resolution: 144dpi),
-            (min-resolution: 1.5dppx){ 
-            background-image: url('../img/fish@2x.png');
+            background-image: url('../svg/fish.svg');
         }
 
-            @media (min-resolution: 216dpi),
-            (min-resolution: 2.2dppx) {
-                background-image: url('../img/fish@3x.png');
-            }
-
+        &-span {
+            width: 195px;
         }
     }
 
@@ -263,8 +160,10 @@
 
 @media(min-width: 900px) {
 
-    .reasons {
-        &__item {
+    .reasons__item {
+        width: 250px;
+
+        &-span {
             width: 250px;
         }
     }

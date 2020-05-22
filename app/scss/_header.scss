@@ -207,6 +207,10 @@
         text-decoration: none;
         color: inherit;
     }
+
+    &__link-svg {
+        display: none;
+    }
 }
 
 .contacts {
@@ -343,8 +347,8 @@
                 color: white;
                 background-color: $green;
 
-                .nav__link--menu::after { 
-                    background-image: url('../img/menu-tick-white.png');
+                .nav__link-svg path{ 
+                    fill: #fff;
                 }
             }
         }
@@ -357,16 +361,12 @@
             text-decoration: none;
             outline: none;
 
-            &--menu::after {
-                content: '';
-                
+            &-svg {
                 display: inline-block;
-                width: 8px;
-                height: 4px;
-                margin-left: 8px;
+                width: 18px;
+                height: 12px;
 
-                background-image: url('../img/menu-tick.png');
-                background-size: cover;
+                background-size: auto;
                 vertical-align: middle;
             }
 
@@ -419,6 +419,10 @@
             display: block;
         }
     }
+
+    .nav__item:hover .menu__list {
+        display: block;
+    }
 }
 
 .menu {
@@ -456,6 +460,3 @@
     }
 }
 
-.nav__item:hover .menu__list {
-    display: block;
-}

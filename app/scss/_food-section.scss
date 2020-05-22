@@ -297,6 +297,9 @@
     }
 
     &__add-left-wrapper{
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
         width: 40px;
         height: 20px;
         padding: 3px 5px;
@@ -306,14 +309,15 @@
     }
 
     &__add-left-btn {
-        width: 10px;
-        height: 10px;
+        width: 9px;
+        height: 9px;
         padding: 0;
 
         border: none;
         background-color: transparent;
-        background-image: url('../svg/cross-add.svg');
-        background-size: cover;
+        background-image: url('../svg/cross.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     &__add-right {
@@ -408,8 +412,9 @@
 .offers {
 
     &__wrapper {
-        background-image: url('../img/new-bg.png');
+        margin-top: 70px;
 
+        background-image: url('../img/new-bg.png');
     }
 
     &__container {
